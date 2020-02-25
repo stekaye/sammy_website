@@ -60,7 +60,7 @@ h1, h2, h3, h4, h5, h6, p {
   font-family: 'Raleway', Helvetica, sans-serif;
 }
 .call-action {
-  border: 1px solid black;
+  border: 1px solid #4C4C4C;
   display: inline-block;
   list-style: none;
   padding: 1em;
@@ -106,7 +106,7 @@ h1, h2, h3, h4, h5, h6, p {
 } */
 .header-nav .call-action {
   padding: 1em;
-  border: 1px solid black;
+  border: 1px solid #4C4C4C;
 }
 .nav-links a {
   font-family: 'Raleway', Helvetica, sans-serif;
@@ -188,7 +188,7 @@ h1, h2, h3, h4, h5, h6, p {
   height: 550px;
 }
 .callout-call {
-  border: 0.7px solid black;
+  border: 0.7px solid #4C4C4C;
   display: inline-block;
   list-style: none;
   padding: 1em;
@@ -252,4 +252,99 @@ h1, h2, h3, h4, h5, h6, p {
   width: 280px;
   height: 280px;
   object-fit: cover;
+}
+
+/* TESTIMONIAL STYLES */
+.testimonial-wrapper {
+  background-color: #f5ab33;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  text-align: center;
+  min-height: 85vh;
+  width: 100%;
+  /* consider doing min-heigh at 100vh and add padding to top */
+}
+.testimonial-image {
+  box-sizing: border-box;
+  flex: 1 1 0;
+  padding-top: 10vh;
+}
+.quote img {
+  /* display: inline-block; */
+  height: 7vh;
+  padding-bottom: 3rem;
+}
+.testimonial-copy {
+  box-sizing: border-box;
+  color: #fff;
+  flex: 3 1 0;
+  font-weight: 100;
+  line-height: 2;
+  padding: 0 20rem;
+}
+.testimonial-author {
+  box-sizing: border-box;
+  color: #fff;
+  flex: 1 1 0;
+  font-weight: 400;
+  line-height: 1;
+  padding: 0rem 20rem;
+}
+.testimonial-call {
+  box-sizing: border-box;
+  flex: 1 1 0;
+  padding-bottom: 5vh;
+}
+
+/* CONTACT FORM STYLES */
+.contact-form-wrapper {
+  display: flex;
+  flex: 1 1 auto;
+  text-align: center;
+  height: 85vh;
+  overflow: hidden;
+  width: 100%;
+  /* consider doing min-heigh at 100vh and add padding to top */
+}
+.contact-form-image {
+  flex: 1 1 0;
+}
+.contact-form-image img {
+  width: 100%
+}
+.contact-form-copy {
+  flex: 1 1 0;
+}
+
+
+/* FOOTER STYLES */
+.footer {
+  background-color: #fff;
+  padding: 3vh 0 5vh;
+  width: 100%;
+}
+.footer h4 {
+  color: #4C4C4C;
+  font-size: 0.7rem;
+  font-weight: 400;
+  padding-top: 5vh;
+  text-align: center;
+}
+.footer-logo {
+  width: 10vh;
+}
+.footer-nav {
+  text-align: center;
+}
+.footer-nav li {
+  display: inline-block;
+  list-style: none;
+  margin-left: 1em;
+  text-align: center;
+}
+.footer-nav .call-action {
+  border: 1px solid #4C4C4C;
+  display: inline-block;
+  padding: 1em;
 }
