@@ -56,20 +56,27 @@ a {
   color: #4C4C4C;
   text-decoration: none;
 }
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6, p, li {
   font-family: 'Raleway', Helvetica, sans-serif;
 }
-.call-action {
+#call-action {
   border: 1px solid #4C4C4C;
   display: inline-block;
   list-style: none;
   padding: 1em;
 }
-.call-action a {
+#call-action:hover {
+  background-color: #4C4C4C;
+}
+#call-action:hover a {
+  color: #fff;
+}
+#call-action a {
   background-color: transparent;
   color: #4C4C4C;
   font-family: 'Raleway', Helvetica, sans-serif;
   font-size: 1em;
+  padding: 1em;
   text-decoration: none;
   text-align: center;
 }
@@ -94,19 +101,24 @@ h1, h2, h3, h4, h5, h6, p {
   float: right;
   padding: 5vh 5vh 0 0;
 }
-.header-nav li {
+.header-nav span,
+.drop-trigger {
+  /* margin-left: 1em; */
+  text-align: center;
+}
+.header-nav > li {
   display: inline-block;
   list-style: none;
-  margin-left: 1em;
+  padding-right: 1.2em;
+  /* margin-left: 1em; */
   text-align: center;
 }
 /* .header-nav > li ~ li {
-  border-left: 1px solid rgba(76, 76, 76, 0.3);
+  border-left: 1px solid rgba(76, 76, 76, 0.1); 
   padding-left: 1em;
 } */
-.header-nav .call-action {
-  padding: 1em;
-  border: 1px solid #4C4C4C;
+.header-nav #call-action a {
+  font-size: 0.8em;
 }
 .nav-links a {
   font-family: 'Raleway', Helvetica, sans-serif;
@@ -114,6 +126,100 @@ h1, h2, h3, h4, h5, h6, p {
   color: #4C4C4C;
   text-decoration: none;
 }
+.nav-links a:hover {
+  color: #f5ab33;
+}
+.nav-links span,
+.drop-trigger {
+  font-family: 'Raleway', Helvetica, sans-serif;
+  font-size: 0.8em;
+  color: #4C4C4C;
+  text-decoration: none;
+}
+.nav-links span:hover {
+  color: #f5ab33;
+}
+
+/* DROPDOWN STYLES */
+.dropdown {
+  position: relative;
+}
+.dropdown:hover .drop-menu {
+  display: block;
+}
+.drop-trigger {
+  display: inline-block;
+  /* padding-right: 1em; */
+  position: relative;
+}
+/* .drop-trigger:after {
+  border: 0.2em solid;
+  border-color: rgb(220, 220, 220) transparent transparent;
+  content: "";
+  height: 0;
+  position: absolute;
+  right: 0;
+  top: 0.2em;
+  width: 0;
+} */
+.drop-menu {
+  /* box-shadow: 0 0 10px 0 rgba(0,0,0,0.2); */
+  display: none;
+  list-style: none;
+  padding: 0.8em 0 0;
+  position: absolute;
+  right: 0;
+  z-index: 9;
+}
+.drop-menu:before {
+  border: 0.6em solid;
+  border-color: transparent transparent rgb(220, 220, 220);
+  content: "";
+  height: 0;
+  position: absolute;
+  right: 1em;
+  top: -0.2em;
+  width: 0;
+}
+.drop-menu li {
+  background-color: rgb(220, 220, 220);
+}
+.drop-menu li ~ li {
+  border-top: 1px dotted rgba(0,0,0,0.2);
+}
+.drop-menu li:first-child {
+  border-radius: 5px 5px 0 0;
+  color: #999;
+  font-size: 0.5em;
+  padding: 1em 1em 0.5em 1.7em;
+  text-align: left;
+  text-transform: uppercase;
+}
+.drop-menu li:last-child {
+  border-radius: 0 0 5px 5px;
+}
+.drop-menu a {
+  color: #4c4c4c;
+  display: block;
+  font-weight: 100;
+  padding: 0.5em 2em 0.5em 1em;
+  text-align: left;
+  text-transform: none;
+  white-space: nowrap;
+}
+.drop-menu a:hover {
+  background-color: rgba(0,0,0,0.1);
+  color: #4c4c4c;
+}
+/* HIDE IN THE FOOTER */
+.footer .dropdown:hover .drop-menu,
+.footer .drop-trigger:after {
+  display: none;
+}
+.footer .drop-trigger {
+  padding-right: 0;
+}
+
 
 /* HERO STYLES */
 .full-hero {
@@ -343,8 +449,31 @@ h1, h2, h3, h4, h5, h6, p {
   margin-left: 1em;
   text-align: center;
 }
-.footer-nav .call-action {
-  border: 1px solid #4C4C4C;
-  display: inline-block;
-  padding: 1em;
+.footer-nav #call-action a {
+  font-size: 0.8em;
+}
+
+/* MEDIA STYLES */
+
+@media (max-width: 800px) {
+ 
+  /* HEADER STYLES */
+  .header-nav {
+    padding: 2vh 1em 0 0;
+  }
+  .header-nav > li {
+    margin-left: 0.25em;
+  }
+  .header-nav > li ~ li {
+    padding-left: 0.25em;
+  }
+  .nav-links a {
+    font-size: 3.25vw;
+  }
+  .header-logo {
+    left: auto;
+  }
+
+  
+
 }
