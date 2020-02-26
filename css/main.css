@@ -130,7 +130,8 @@ h1, h2, h3, h4, h5, h6, p, li {
   color: #f5ab33;
 }
 .nav-links span,
-.drop-trigger {
+.drop-trigger,
+.show-mobile-menu {
   font-family: 'Raleway', Helvetica, sans-serif;
   font-size: 0.8em;
   color: #4C4C4C;
@@ -138,6 +139,12 @@ h1, h2, h3, h4, h5, h6, p, li {
 }
 .nav-links span:hover {
   color: #f5ab33;
+}
+
+/* MOBILE MENU */
+.mobile-menu-check,
+.show-mobile-menu {
+  display: none;
 }
 
 /* DROPDOWN STYLES */
@@ -252,7 +259,7 @@ h1, h2, h3, h4, h5, h6, p, li {
   min-height: 85vh;
   position: relative;
   width: 100%;
-  /* consider doing min-heigh at 100vh and add padding to top */
+  /* consider doing min-height at 100vh and add padding to top */
 }
 .callout-copy {
   background-color: rgba(220, 220, 220, 1);
@@ -374,7 +381,7 @@ h1, h2, h3, h4, h5, h6, p, li {
 .testimonial-image {
   box-sizing: border-box;
   flex: 1 1 0;
-  padding-top: 10vh;
+  padding-top: 3em;
 }
 .quote img {
   /* display: inline-block; */
@@ -384,10 +391,11 @@ h1, h2, h3, h4, h5, h6, p, li {
 .testimonial-copy {
   box-sizing: border-box;
   color: #fff;
-  flex: 3 1 0;
+  flex: 1 1 0;
+  font-size: 1.2em;
   font-weight: 100;
   line-height: 2;
-  padding: 0 20rem;
+  padding: 1em 7em;
 }
 .testimonial-author {
   box-sizing: border-box;
@@ -395,12 +403,12 @@ h1, h2, h3, h4, h5, h6, p, li {
   flex: 1 1 0;
   font-weight: 400;
   line-height: 1;
-  padding: 0rem 20rem;
+  padding: 2em 10em;
 }
 .testimonial-call {
   box-sizing: border-box;
   flex: 1 1 0;
-  padding-bottom: 5vh;
+  padding-bottom: 2em;
 }
 
 /* CONTACT FORM STYLES */
@@ -455,7 +463,7 @@ h1, h2, h3, h4, h5, h6, p, li {
 
 /* MEDIA STYLES */
 
-@media (max-width: 800px) {
+@media (max-width: 700px) {
  
   /* HEADER STYLES */
   .header-nav {
@@ -467,13 +475,146 @@ h1, h2, h3, h4, h5, h6, p, li {
   .header-nav > li ~ li {
     padding-left: 0.25em;
   }
-  .nav-links a {
+  .nav-links a span {
     font-size: 3.25vw;
   }
   .header-logo {
     left: auto;
   }
 
-  
+  /* MOBILE MENU */
+  .show-mobile-menu {
+    display: block;
+    float: right;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 1.5vh;
+    padding: 1.5em;
+    position: relative;
+    text-transform: uppercase;
+  }
+  .show-mobile-menu li {
+    vertical-align: middle;
+  }
+  .header-nav {
+    background-color: #fff;
+    box-sizing: border-box;
+    left: 0;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+    top: 15vh;
+    transition: all 0.5s ease-in-out;
+    width: 100vw;
+    z-index: 9;
+  }
+  .header-nav li {
+    display: block;
+    margin-top: 1em;
+  }
+  .header-nav li ~ li {
+    border: 0;
+    padding: 0;
+  }
+  .header-nav li:last-child {
+    margin-bottom: 1em;
+  }
+  .header-nav li:first-child a {
+    color: #fff;
+  }
+  /* HIDE DROPDOWN IN THE NAV MENU */
+  .header-nav .dropdown:hover .drop-menu,
+  .header-nav .drop-trigger:after {
+    display: none;
+  }
+  .header-nav .drop-trigger {
+    padding-right: 0;
+  }
+  .mobile-menu-check:checked ~ .header-nav {
+    max-height: 1000px;
+  }
+  .mobile-menu-check:checked ~ .show-mobile-menu:after {
+    background-color: #fff;
+    color: #ed6e2f;
+    content: "CLOSE";
+    left: 0;
+    position: absolute;
+    top: 1.5em;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* HERO STYLES */
+  .hero-content {
+    top: 15%;
+    left: 3%;
+  }
+  .hero-content h1 {
+    font-size: 3vh;
+    font-weight: 400;
+  }
+  .hero-home {
+    background-image: url(../images/mountain3.jpeg);
+    background-position: center center;
+    background-size: cover;
+}
+
+/* HERO STYLES */
+.home-callout {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.callout-image {
+  display: block;
+  flex: 1 1 0;
+  left: 0;
+  min-height: 90vh;
+  position: inherit;
+  top: 0;
+  transform: inherit;
+  width: 100%;
+}
+.callout-copy {
+  display: block;
+  flex: 1 1 0;
+  left: 0;
+  min-height: 90vh;
+  position: inherit;
+  top: 0;
+  transform: inherit;
+  width: 100%;
+}
+.callout-copy .callout-title {
+  flex: 0 1 0;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 0.4em 0 0.8em;
+}
+.callout-copy p {
+  flex: 1 1 0;
+  font-weight: 100;
+  font-size: 0.82rem;
+  line-height: 1.3rem;
+}
+
+/* SERVICES STYLES */
+.services-section {
+  flex-direction: column;
+  min-height: 85vh;
+}
+.services-box {
+  float: none;
+  font-size: 1.3rem;
+  width: auto;
+}
+
+/* TESTIMONIALS STYLES */
+.testimonial-copy {
+  font-size: 1em;
+  line-height: 1.5;
+}
+.
 
 }
