@@ -100,11 +100,11 @@ h1, h2, h3, h4, h5, h6, p, li {
   width: 14vh;
 }
 .header-logo img {
-  width: 19vh;
+  width: 22vh;
 }
 .header-nav {
   float: right;
-  padding: 5vh 5vh 0 0;
+  padding: 6.2vh 5vh 0 0;
 }
 .header-nav span,
 .drop-trigger {
@@ -123,29 +123,27 @@ h1, h2, h3, h4, h5, h6, p, li {
   padding-left: 1em;
 } */
 .header-nav #call-action a {
-  font-size: 0.8em;
+  font-size: 0.9em;
 }
 .header-nav a {
   font-family: 'Raleway', Helvetica, sans-serif;
-  font-size: 0.8em;
+  font-size: 0.9em;
   color: #4C4C4C;
   text-decoration: none;
 }
-.header-nav a:hover
-.header-nav a:active {
-  color: #f5ab33;
+.header-nav a:hover {
+  color: #ffaf06;
 }
 .header-nav span,
 .drop-trigger,
 .show-mobile-menu {
   font-family: 'Raleway', Helvetica, sans-serif;
-  font-size: 0.8em;
+  font-size: 0.9em;
   color: #4C4C4C;
   text-decoration: none;
 }
-.header-nav span:hover
-.header-nav span:active {
-  color: #f5ab33;
+.header-nav span:hover {
+  color: #ffaf06;
 }
 
 /* MOBILE MENU */
@@ -187,7 +185,7 @@ h1, h2, h3, h4, h5, h6, p, li {
 }
 .drop-menu:before {
   border: 0.6em solid;
-  border-color: transparent transparent rgb(220, 220, 220);
+  border-color: transparent transparent #ffaf06;
   content: "";
   height: 0;
   position: absolute;
@@ -196,16 +194,16 @@ h1, h2, h3, h4, h5, h6, p, li {
   width: 0;
 }
 .drop-menu li {
-  background-color: rgb(220, 220, 220);
+  background-color: #ffaf06;
 }
 .drop-menu li ~ li {
   border-top: 1px dotted rgba(0,0,0,0.2);
 }
 .drop-menu li:first-child {
   border-radius: 5px 5px 0 0;
-  color: #999;
-  font-size: 0.5em;
-  padding: 1em 1em 0.5em 1.7em;
+  color: #4d4d4d;
+  font-size: 0.6em;
+  padding: 1em 1em 0.5em 1.4em;
   text-align: left;
   text-transform: uppercase;
 }
@@ -213,9 +211,10 @@ h1, h2, h3, h4, h5, h6, p, li {
   border-radius: 0 0 5px 5px;
 }
 .drop-menu a {
-  color: #4c4c4c;
+  color: #808080;
   display: block;
-  font-weight: 100;
+  font-size: 0.8em;
+  font-weight: 400;
   padding: 0.5em 2em 0.5em 1em;
   text-align: left;
   text-transform: none;
@@ -253,12 +252,13 @@ h1, h2, h3, h4, h5, h6, p, li {
   padding-left: 5.5vh;
   position: relative;
   text-align: center;
-  top: 20%;
+  top: 30%;
   transform: translate(0, -20%);
 }
 .hero-content h1 {
-  color: rgba(76, 76, 76, 0.8);
+  color: rgba(76, 76, 76, 0.4);
   font-weight: 400;
+  text-transform: uppercase;
 }
 
 /* CALLOUT STYLES */
@@ -275,27 +275,29 @@ h1, h2, h3, h4, h5, h6, p, li {
   max-width: 20vw;
 }
 .callout-copy {
-  background-color: rgba(220, 220, 220, 1);
+  background-color: rgba(240, 240, 240, 1);
   box-sizing: border-box;
   flex: 1 0 auto;
-  padding: 1em 2em;
+  padding: 1em 3em;
   margin-bottom: 4vh;
   margin-top: 4vh;
   max-height: 78vh;
   max-width: 50vw;
   min-width: 30vw;
-  overflow: scroll;
+  /* overflow: scroll; */
 }
 .callout-copy .callout-title {
-  font-size: 1.4rem;
+  font-size: 1.4vw;
   font-weight: 400;
   padding: 1.5rem 1.5rem 1rem;
   text-transform: uppercase;
 }
 .callout-copy p {
   font-weight: 100;
-  font-size: 1.4vw;
+  font-size: 2.2vh;
   line-height: 1.8rem;
+  max-height: 60%;
+  overflow: scroll;
   padding: 1rem 1.5rem 0;
   text-align: justify;
 }
@@ -408,7 +410,7 @@ h1, h2, h3, h4, h5, h6, p, li {
   /* box-sizing: border-box; */
   color: #fff;
   flex: 3 1 0;
-  font-size: 2.3vh;
+  font-size: 2.7vh;
   font-weight: 100;
   line-height: 2;
   overflow: scroll;
@@ -421,7 +423,7 @@ h1, h2, h3, h4, h5, h6, p, li {
   flex: 1 1 0;
   font-weight: 400;
   line-height: 1;
-  padding: 1rem 5rem 0;
+  padding: 2.5rem 5rem 0;
 }
 .testimonial-call {
   /* box-sizing: border-box; */
@@ -434,37 +436,62 @@ h1, h2, h3, h4, h5, h6, p, li {
   display: flex;
   flex: 1 1 auto;
   text-align: center;
-  height: 85vh;
-  overflow: hidden;
+  min-height: 86vh;
   width: 100%;
   /* consider doing min-heigh at 100vh and add padding to top */
 }
 .contact-form-image {
+  background-position: center bottom;
+  background-image: url(../images/forest5.jpeg);
+  background-size: cover;
   flex: 1 1 0;
+  min-height: 100%;
 }
 .contact-form-image img {
   width: 100%
 }
 .contact-form-copy {
+  display: flex;
   flex: 1 1 0;
+  flex-direction: column;
+  max-height: 86vh;
 }
-
+.contact-form-copy h1 {
+  font-size: 5vh;
+  font-weight: 400;
+  padding-top: 2.2rem;
+}
+.contact-form-copy p {
+  font-size: 2.2vh;
+  font-weight: 100;
+  line-height: 1.5;
+  max-height: 15%;
+  overflow: scroll;
+  padding-top: 1.5rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+.contact-form-call {
+  padding-top: 2rem;
+}
+.faq-call {
+  padding-bottom: 3rem;
+  border-bottom: 0.5px dotted rgba(76, 76, 76, 0.3);
+}
 
 /* FOOTER STYLES */
 .footer {
-  background-color: #fff;
-  padding: 10vh 0 5vh;
+  background-color:#4c4c4c;
+  height: 14vh;
+  padding: 2rem 0 1rem;
   width: 100%;
 }
 .footer h4 {
-  color: #4C4C4C;
+  color: rgb(240, 240, 240);
   font-size: 0.7rem;
   font-weight: 400;
   padding-top: 5vh;
   text-align: center;
-}
-.footer-logo {
-  width: 10vh;
 }
 .footer-nav {
   text-align: center;
@@ -475,8 +502,11 @@ h1, h2, h3, h4, h5, h6, p, li {
   margin-left: 1em;
   text-align: center;
 }
+.footer-nav a {
+  color: #fff;
+}
 .footer-nav #call-action a {
-  font-size: 0.8em;
+  display: none;
 }
 
 /* MEDIA STYLES */
@@ -591,24 +621,24 @@ h1, h2, h3, h4, h5, h6, p, li {
 } */
 .callout-copy {
   flex: 2 1 0;
-  min-height: 86vh;
+  min-height: 76vh;
   min-width: 70vw;
 }
 .callout-copy .callout-title {
   font-size: 1.4rem;
   font-weight: 400;
-  padding: 2rem 1.5rem 1rem;
+  padding: 2rem 0.4rem 1rem;
   text-transform: uppercase;
 }
 .callout-copy p {
   font-weight: 100;
-  font-size: 2.3vw;
+  font-size: 2vh;
   line-height: 1.6rem;
-  padding: 1rem 1.5rem 0;
+  padding: 1rem 0.4rem 0;
   text-align: justify;
 }
 .callout-copy ul {
-  padding: 0 1.5rem 2rem;
+  padding: 0 0.4rem 2rem;
 }
 
 /* SERVICES STYLES */
@@ -627,7 +657,7 @@ h1, h2, h3, h4, h5, h6, p, li {
 .services-box {
   font-size: 1rem;
   padding: 0, 3rem;
-  min-height: 80vh;
+  /* min-height: 80vh; */
 }
 .services-header {
   min-height: 15vh;
@@ -647,15 +677,60 @@ h1, h2, h3, h4, h5, h6, p, li {
 
 /* TESTIMONIALS STYLES */
 .testimonial-copy {
-  font-size: 0.9rem;
+  font-size: 2.4vh;
   line-height: 1.5;
-  padding: 0.5rem 2rem 0;
+  padding: 0.5rem 3rem 0;
 }
 .testimonial-author {
-  padding: 3rem 5rem 0;
+  padding-top: 2rem;
 }
 .testimonial-image {
   padding-top: 2rem;
+}
+/* CONTACT STYLES */
+.contact-form-wrapper {
+  flex-direction: column;
+  min-height: 120vh;
+  text-align: center;
+}
+.contact-form-image {
+  flex: 1 1 0;
+}
+.contact-form-copy {
+  display: flex;
+  flex: 2 1 0;
+  flex-direction: column;
+  min-height: 86vh;
+}
+.contact-mobile-flex {
+  flex: 1 1 0;
+  min-height: 50%;
+}
+.contact-flex-one {
+  background-color: rgb(240, 240, 240);
+}
+.contact-flex-two {
+  background-color: rgb(220, 220, 220);
+}
+.contact-form-copy p {
+  font-size: 2.3vh;
+  padding-top: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.contact-form-copy p > span {
+  display: none;
+}
+.contact-form-copy h1 {
+  font-size: 4vh;
+  padding-top: 1.5rem;
+}
+.contact-form-call {
+  padding-top: 1rem;
+}
+.faq-call {
+  border: none;
+  padding-bottom: 1rem;
 }
 
 }
