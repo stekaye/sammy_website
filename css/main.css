@@ -410,7 +410,7 @@ h1, h2, h3, h4, h5, h6, p, li {
   /* box-sizing: border-box; */
   color: #fff;
   flex: 3 1 0;
-  font-size: 2.7vh;
+  font-size: 2.6vh;
   font-weight: 100;
   line-height: 2;
   overflow: scroll;
@@ -445,50 +445,89 @@ h1, h2, h3, h4, h5, h6, p, li {
   background-image: url(../images/forest5.jpeg);
   background-size: cover;
   flex: 1 1 0;
-  min-height: 100%;
+  max-height: 86vh;
 }
 .contact-form-image img {
   width: 100%
 }
 .contact-form-copy {
-  display: flex;
+  /* display: flex; */
   flex: 1 1 0;
-  flex-direction: column;
-  max-height: 86vh;
+  /* flex-direction: column; */
+  min-height: 86vh;
 }
 .contact-form-copy h1 {
-  font-size: 5vh;
+  font-size: 3.2vw;
   font-weight: 400;
-  padding-top: 2.2rem;
+  padding-top: 2rem;
 }
 .contact-form-copy p {
   font-size: 2.2vh;
   font-weight: 100;
-  line-height: 1.5;
-  max-height: 15%;
-  overflow: scroll;
-  padding-top: 1.5rem;
-  padding-left: 3rem;
-  padding-right: 3rem;
+  line-height: 1.4;
+  padding: 1rem 2rem 0;
 }
-.contact-form-call {
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], input[type=email], input[type=message], input[type=tel], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #4c4c4c; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 20px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #4c4c4c;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #ed6e2f;
+}
+
+/* Add a background color and some padding around the form */
+.contact-form-form-container {
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 1.5rem 6vw 1rem;
+
+}
+.contact-form-form-text {
+  font-family: 'Raleway', Helvetica, sans-serif;
+  font-size: 0.9rem;
+}
+
+
+
+/* .contact-form-call {
   padding-top: 2rem;
 }
 .faq-call {
   padding-bottom: 3rem;
   border-bottom: 0.5px dotted rgba(76, 76, 76, 0.3);
-}
+} */
 
 /* FOOTER STYLES */
 .footer {
   background-color:#4c4c4c;
-  height: 14vh;
+  flex: 1;
+  height: 10vh;
   padding: 2rem 0 1rem;
   width: 100%;
 }
 .footer h4 {
   color: rgb(240, 240, 240);
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-weight: 400;
   padding-top: 5vh;
   text-align: center;
@@ -504,9 +543,7 @@ h1, h2, h3, h4, h5, h6, p, li {
 }
 .footer-nav a {
   color: #fff;
-}
-.footer-nav #call-action a {
-  display: none;
+  font-size: 1rem;
 }
 
 /* MEDIA STYLES */
@@ -596,10 +633,10 @@ h1, h2, h3, h4, h5, h6, p, li {
 
   /* HERO STYLES */
   .hero-content {
-    top: 15%;
+    top: 24%;
   }
   .hero-content h1 {
-    font-size: 4vh;
+    font-size: 6vw;
     font-weight: 400;
     left: 50%;
     position: absolute;
@@ -628,6 +665,7 @@ h1, h2, h3, h4, h5, h6, p, li {
   font-size: 1.4rem;
   font-weight: 400;
   padding: 2rem 0.4rem 1rem;
+  text-align: center;
   text-transform: uppercase;
 }
 .callout-copy p {
@@ -690,7 +728,7 @@ h1, h2, h3, h4, h5, h6, p, li {
 /* CONTACT STYLES */
 .contact-form-wrapper {
   flex-direction: column;
-  min-height: 120vh;
+  min-height: 86vh;
   text-align: center;
 }
 .contact-form-image {
@@ -702,35 +740,47 @@ h1, h2, h3, h4, h5, h6, p, li {
   flex-direction: column;
   min-height: 86vh;
 }
-.contact-mobile-flex {
+/* .contact-mobile-flex {
+  box-sizing: border-box;
   flex: 1 1 0;
   min-height: 50%;
+  padding: 2vh 1vw 1vh;
 }
 .contact-flex-one {
   background-color: rgb(240, 240, 240);
 }
 .contact-flex-two {
   background-color: rgb(220, 220, 220);
-}
+} */
 .contact-form-copy p {
-  font-size: 2.3vh;
-  padding-top: 1rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  font-size: 1rem;
+  max-height: 15vh;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-top: 2vh;
 }
 .contact-form-copy p > span {
   display: none;
 }
 .contact-form-copy h1 {
   font-size: 4vh;
-  padding-top: 1.5rem;
+  padding-bottom: 2vh;
+  padding-top: 3vh;
 }
-.contact-form-call {
-  padding-top: 1rem;
+/* .contact-form-call {
+  padding-top: 4vh;
 }
 .faq-call {
   border: none;
-  padding-bottom: 1rem;
+  padding-top: 4vh;
+} */
+
+.contact-form-form-container {
+  border-radius: 5px;
+  background-color: #fff;
+  max-height: 150vh;
+  padding: 1.5rem 6vw 1rem;
+
 }
 
 }
@@ -745,14 +795,18 @@ h1, h2, h3, h4, h5, h6, p, li {
   flex-direction: column-reverse;
 }
 .callout-image{
+  background-color: rgb(240, 240, 240);
   flex: 1 1 0;
+  text-align: center;
 }
 .callout-image img {
-  margin: 0;
-  min-height: 86vh;
-  width: 100%;
+  border-radius: 50%;
+  width: 280px;
+  height: 280px;
+  object-fit: cover ;
 }
 .callout-copy {
+  background-color: rgb(220, 220, 220);
   flex: 1 1 0;
   margin: 0;
   margin-top: 0;
@@ -767,13 +821,81 @@ h1, h2, h3, h4, h5, h6, p, li {
 }
 .callout-copy p {
   font-weight: 100;
-  font-size: 3.5vw;
-  line-height: 1.6rem;
-  padding: 1rem 0.5rem 0;
+  font-size: 3.8vw;
+  line-height: 1.5rem;
+  padding: 1rem 0.4rem 0;
   text-align: justify;
 }
 .callout-copy ul {
   padding: 2rem 0.5rem 0;
+}
+
+/* FOOTER STYLES */
+.footer {
+  height: 13vh;
+  padding: 2rem 0;
+}
+.footer h4 {
+  font-size: 0.8rem;
+  padding-top: 1.8rem;
+}
+.footer h4 span {
+  display: block;
+  padding-top: 0.8rem;
+}
+.footer-nav {
+  text-align: center;
+}
+.footer-nav li {
+  font-size: 4vw;
+}
+
+}
+
+@media (max-width: 350px) {
+
+/* CALLOUT STYLES */
+.callout-copy p {
+  font-weight: 100;
+  font-size: 3.7vw;
+  line-height: 1.4rem;
+  max-height: 60vh;
+  overflow: scroll;
+  padding: 0.6rem 0.3rem 0;
+  text-align: justify;
+}
+.callout-copy p > span {
+  display: none;
+}
+.callout-copy ul {
+  padding: 2rem 0.3rem 0;
+}
+
+/* CONTACT STYLES */
+.contact-form-copy h1 {
+  font-size: 4vh;
+  padding-bottom: 2vh;
+  padding-top: 3vh;
+}
+
+/* FOOTER STYLES */
+.footer {
+  height: 12vh;
+  padding: 1rem 0;
+}
+.footer h4 {
+  font-size: 0.7rem;
+  padding-top: 1rem;
+}
+.footer h4 span {
+  display: block;
+  padding-top: 0.6rem;
+}
+.footer-nav {
+  text-align: center;
+}
+.footer-nav li {
+  font-size: 4vw;
 }
 
 }
