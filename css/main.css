@@ -50,7 +50,7 @@ a img {
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100%;
 }
 a {
   color: #4C4C4C;
@@ -432,40 +432,39 @@ h1, h2, h3, h4, h5, h6, p, li {
 }
 
 /* CONTACT FORM STYLES */
-.contact-form-wrapper {
+.contact-wrapper {
   display: flex;
-  flex: 1 1 auto;
-  text-align: center;
+  flex: 1 1 0;
   min-height: 86vh;
+  text-align: center;
   width: 100%;
-  /* consider doing min-heigh at 100vh and add padding to top */
+  /* consider doing min-height at 100vh and add padding to top */
 }
-.contact-form-image {
+.contact-image {
   background-position: center bottom;
   background-image: url(../images/forest5.jpeg);
   background-size: cover;
-  flex: 1 1 0;
-  max-height: 86vh;
+  flex: 2 1 0;
+  /* min-height: 86vh; */
 }
-.contact-form-image img {
+.contact-image img {
   width: 100%
 }
-.contact-form-copy {
-  /* display: flex; */
-  flex: 1 1 0;
-  /* flex-direction: column; */
-  min-height: 86vh;
+.contact-copy {
+  display: flex;
+  flex: 3 1 0;
+  flex-direction: column;
+  padding: 3vh 0 2vh;
 }
-.contact-form-copy h1 {
-  font-size: 3.2vw;
+.contact-copy h1 {
+  font-size: 1.6rem;
   font-weight: 400;
-  padding-top: 2rem;
 }
-.contact-form-copy p {
-  font-size: 2.2vh;
+.contact-copy p {
+  font-size: 0.95rem;
   font-weight: 100;
   line-height: 1.4;
-  padding: 1rem 2rem 0;
+  padding: 3vh 8vw 5vh;
 }
 
 /* Style inputs with type="text", select elements and textareas */
@@ -496,34 +495,23 @@ input[type=submit]:hover {
 }
 
 /* Add a background color and some padding around the form */
-.contact-form-form-container {
+.contact-copy-form{
   border-radius: 5px;
   background-color: #fff;
-  padding: 1.5rem 6vw 1rem;
+  padding: 0 12vw 2vh;
 
 }
-.contact-form-form-text {
+.form-text {
   font-family: 'Raleway', Helvetica, sans-serif;
   font-size: 0.9rem;
 }
-
-
-
-/* .contact-form-call {
-  padding-top: 2rem;
-}
-.faq-call {
-  padding-bottom: 3rem;
-  border-bottom: 0.5px dotted rgba(76, 76, 76, 0.3);
-} */
 
 /* FOOTER STYLES */
 .footer {
   background-color:#4c4c4c;
   flex: 1;
-  height: 10vh;
-  padding: 2rem 0 1rem;
-  width: 100%;
+  min-height: 10vh;
+  padding: 5vh 0 4vh;
 }
 .footer h4 {
   color: rgb(240, 240, 240);
@@ -531,6 +519,10 @@ input[type=submit]:hover {
   font-weight: 400;
   padding-top: 5vh;
   text-align: center;
+}
+.footer h4 span {
+  display: block;
+  padding-top: 2vh;
 }
 .footer-nav {
   text-align: center;
@@ -550,7 +542,7 @@ input[type=submit]:hover {
 
 @media (max-width: 900px) {
  
-  /* HEADER STYLES */
+  /* HEADER STYLES - MAX 900PX */
   .header-nav {
     padding: 2vh 1em 0 0;
   }
@@ -567,7 +559,7 @@ input[type=submit]:hover {
     left: 3%;;
   }
 
-  /* MOBILE MENU */
+  /* MOBILE MENU - MAX 900PX */
   .show-mobile-menu {
     display: block;
     float: right;
@@ -631,7 +623,7 @@ input[type=submit]:hover {
     text-align: center;
   }
 
-  /* HERO STYLES */
+  /* HERO STYLES - MAX 900PX */
   .hero-content {
     top: 24%;
   }
@@ -648,7 +640,7 @@ input[type=submit]:hover {
     background-size: cover;
 }
 
-/* CALLOUT STYLES */
+/* CALLOUT STYLES - MAX 900PX */
 
 .callout-image{
   flex: 0 1 auto;
@@ -679,7 +671,7 @@ input[type=submit]:hover {
   padding: 0 0.4rem 2rem;
 }
 
-/* SERVICES STYLES */
+/* SERVICES STYLES - MAX 900PX */
 .services-section {
   min-height: 86vh;
   max-width: 100vw;
@@ -713,7 +705,7 @@ input[type=submit]:hover {
   text-align: center;
 }
 
-/* TESTIMONIALS STYLES */
+/* TESTIMONIALS STYLES - MAX 900PX */
 .testimonial-copy {
   font-size: 2.4vh;
   line-height: 1.5;
@@ -725,71 +717,21 @@ input[type=submit]:hover {
 .testimonial-image {
   padding-top: 2rem;
 }
-/* CONTACT STYLES */
-.contact-form-wrapper {
-  flex-direction: column;
-  min-height: 86vh;
-  text-align: center;
+/* CONTACT STYLES - MAX 900PX */
+.contact-wrapper {
+  flex-direction: column-reverse;
 }
-.contact-form-image {
-  flex: 1 1 0;
-}
-.contact-form-copy {
-  display: flex;
-  flex: 2 1 0;
-  flex-direction: column;
-  min-height: 86vh;
-}
-/* .contact-mobile-flex {
-  box-sizing: border-box;
-  flex: 1 1 0;
-  min-height: 50%;
-  padding: 2vh 1vw 1vh;
-}
-.contact-flex-one {
-  background-color: rgb(240, 240, 240);
-}
-.contact-flex-two {
-  background-color: rgb(220, 220, 220);
-} */
-.contact-form-copy p {
-  font-size: 1rem;
-  max-height: 15vh;
-  padding-left: 5vw;
-  padding-right: 5vw;
-  padding-top: 2vh;
-}
-.contact-form-copy p > span {
+/* .contact-image {
   display: none;
-}
-.contact-form-copy h1 {
-  font-size: 4vh;
-  padding-bottom: 2vh;
-  padding-top: 3vh;
-}
-/* .contact-form-call {
-  padding-top: 4vh;
-}
-.faq-call {
-  border: none;
-  padding-top: 4vh;
 } */
-
-.contact-form-form-container {
-  border-radius: 5px;
-  background-color: #fff;
-  max-height: 150vh;
-  padding: 1.5rem 6vw 1rem;
-
+.contact-copy p {
+  font-size: 1rem;
 }
-
 }
-
-
 
 @media (max-width: 450px) {
 
-/* CALLOUT STYLES */
+/* CALLOUT STYLES - MAX 450PX */
 .home-callout {
   display: flex;
   flex-direction: column-reverse;
@@ -830,31 +772,25 @@ input[type=submit]:hover {
   padding: 2rem 0.5rem 0;
 }
 
-/* FOOTER STYLES */
+/* CONTACT STYLES - MAX 450 */
+.contact-wrapper {
+  flex-direction: column-reverse;
+  min-height: 130vh;
+}
+
+/* FOOTER STYLES - MAX 450PX */
 .footer {
-  height: 13vh;
-  padding: 2rem 0;
+  padding: 4vh 0 3vh;
 }
 .footer h4 {
-  font-size: 0.8rem;
   padding-top: 1.8rem;
-}
-.footer h4 span {
-  display: block;
-  padding-top: 0.8rem;
-}
-.footer-nav {
-  text-align: center;
-}
-.footer-nav li {
-  font-size: 4vw;
 }
 
 }
 
 @media (max-width: 350px) {
 
-/* CALLOUT STYLES */
+/* CALLOUT STYLES - MAX 350PX */
 .callout-copy p {
   font-weight: 100;
   font-size: 3.7vw;
@@ -871,31 +807,48 @@ input[type=submit]:hover {
   padding: 2rem 0.3rem 0;
 }
 
-/* CONTACT STYLES */
-.contact-form-copy h1 {
+/* CONTACT STYLES - MAX 350PX */
+.contact-copy h1 {
   font-size: 4vh;
   padding-bottom: 2vh;
   padding-top: 3vh;
 }
 
-/* FOOTER STYLES */
+/* FOOTER STYLES - MAX 350PX */
 .footer {
-  height: 12vh;
-  padding: 1rem 0;
+  padding: 4vh 0 3vh;
 }
 .footer h4 {
   font-size: 0.7rem;
   padding-top: 1rem;
 }
 .footer h4 span {
-  display: block;
   padding-top: 0.6rem;
 }
-.footer-nav {
-  text-align: center;
-}
 .footer-nav li {
-  font-size: 4vw;
+  font-size: 0.75rem;
 }
 
 }
+
+@media (max-height: 800px) {
+
+  /* CONTACT STYLES - MAX 800PX HEIGHT */
+  .contact-wrapper {
+    /* min-height: 105vh; */
+  }
+  .contact-copy {
+    padding-top: 8vh;
+  }
+}
+
+@media (max-height: 600px) {
+
+  /* CONTACT STYLES - MAX 600PX HEIGHT */
+  .contact-wrapper {
+    min-height: 150vh;
+  }
+  .contact-copy {
+    padding-top: 4vh;
+  }
+  }
