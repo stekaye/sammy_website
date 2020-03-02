@@ -1,186 +1,107 @@
-<!DOCTYPE html>
-  
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Samantha Hawkins</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,400&display=swap">
-    <link rel="stylesheet" href="/fonts/fontawesome-free-5.12.1-web/css/all.css">
-    <link rel="stylesheet" href="css/main.css">
-  </head>
+---
+layout: default
+---
 
-  <body>
-    
-    <header class="header">
-      <nav>
-        <input type="checkbox" id="mobile-menu" class="mobile-menu-check">
-        <label for="mobile-menu" class="show-mobile-menu">Menu</label>
-      <ul class="header-nav nav-links">
-        <li><a href="/">Home</a></li>
-        <li class="dropdown">
-          <span class="drop-trigger">Individuals</span>
-          <ul class="drop-menu">
-            <li>Individuals</li>
-              <li><a href="/">Coaching for Individuals</a></li>
-              <li><a href="/">Coaching for Teenagers</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <span class="drop-trigger">Organisations</span>
-          <ul class="drop-menu">
-            <li>Organisations</li>
-              <li><a href="/">Coaching within Organisations</a></li>
-              <li><a href="/">Facilitation, Workshops & Guest Speaking</a></li>
-          </ul>
-        </li>
-        <li><a href="../about/index.html">About Me</a></li>
-        <li><a href="/">Blog</a></li>
-        <li><a href="/">Testimonials</a></li>
-        <li><a href="/">FAQs</a></li>
+<div class="home">
+  <div class="full-hero hero-home">
+    <div class="hero-content">
+      <h1>Choose Courage over Comfort</h1>
+    </div>
+  </div>
+  </div>
+
+  <div class="home-callout">
+    <div class="blank-space"></div>
+    <div class="callout-copy">
+      <h1 class="callout-title">My Story</h1>
+      <p>I have nearly 10 years’ experience working as a teacher, facilitator, coach, consultant and mentor, and at the heart of what I do is to help people & organisations reach their full potential. I work with those who are aspiring to make changes, whether that relates to achieving specific goals, overcoming challenges, shifting mindset, or transforming the way they live, work and operate. At the heart of what I do is to help people create meaning and impact in their lives and work. <span>Often, this means guiding them to evaluate their definition of “success” and what it looks like for them, and then, through powerful conversations and insight, helping them to move towards this.</span></p>
+      <ul>
         <li id="call-action"><a href="/">Get in Touch</a></li>
       </ul>
-      </nav>
-      <a href="/" class="header-logo"><img src="images/logo_home.png" alt="Samantha Hawkins"></a>
-    </header>
+    </div>
+    <div class="callout-image">
+      <img src="images/profile_crop.jpg">
+    </div>
+    <div class="blank-space"></div>
+  </div>
 
-    <div class="home">
-    <div class="full-hero hero-home">
-      <div class="hero-content">
-        <h1>Choose Courage over Comfort</h1>
+  <div class="services-section">
+    <div class="services-header">
+      <h1>My Services</h1>
+    <div class="services-copy-wrapper">
+      <div class="services-box services-indiv">
+        <div class="services-images">
+          <a><img src="images/individuals.jpg" alt="Coaching for Individuals"></a>
+      </div>
+        <div class="services-title">
+          <h3><a href="">Coaching for Individuals</a></h3>
+        </div>
+      </div>
+      <div class="services-box services-orgs">
+        <div class="services-images">
+          <a><img src="images/organisations.jpg" alt="Coaching for Individuals"></a>
+      </div>
+        <div class="services-title">
+          <h3><a href="">Coaching in Organisations</ahref=""></h3>
+        </div>
+      </div>
+      <div class="services-box services-other">
+        <div class="services-images">
+          <a><img src="images/workshops.jpg" alt="Coaching for Individuals"></a>
+      </div>
+        <div class="services-title">
+          <h3><a href="">Facilitation, Workshops & Guest Speaking</a></h3>
+        </div>
+      </div>
+      </div>
+      </div>
+  </div>
+
+  <div class="testimonial-wrapper">
+    <div class="testimonial-box testimonial-image">
+      <a class="quote"href="/"><img src="images/quote.png"></a>
+    </div>
+    <div class="testimonial-box testimonial-copy">
+      <p>
+        One of my biggest struggles has been my finances, not knowing how to prioritise my spending and struggling to save for my future. Working with Sammy has been truly life changing and helped me put in place techniques that even after one session, I saw a difference, not only in my spending habits, but my attitude to money in general. This has been an issue I’ve faced for many years, and have never been able to tackle it. Without her help, I would never have been able to do it alone. I am looking forward to continuing to work with her and seeing improvements in my everyday life and happiness.
+      </p>
+    </div>
+    <div class="testimonial-box testimonial-author">
+      <h2>Meghan Emily</h2>
+    </div>
+    <div class="testimonial-box testimonial-call">
+      <ul>
+        <li id="call-action"><a href="/">Read Testimonials</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="contact-wrapper">
+    <div class="contact-image">
+      
+    </div>
+    <div class="contact-copy">
+      
+      <div class="contact-copy-text">
+        <h1>Learn More</h1>
+        <p>Want to learn more about the work I do<span>, what coaching involves</span> and and how you might benefit from working with me? Get in touch using the contact form below.
+      </div>
+          
+      <div class="contact-copy-form">
+        <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/samantha@hawkins.net" method="post">
+          <fieldset id="fs-frm-inputs">
+            <label class="form-text" for="full-name">Full Name</label>
+            <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
+            <label class="form-text" for="phone-number">Phone Number</label>
+            <input type="tel" name="number" id="phone-number" placeholder="Include country code" required="">
+            <label class="form-text" for="email-address">Email Address</label>
+            <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required="">
+            <label class="form-text" for="message">Message</label>
+            <textarea rows="5" name="message" id="message" placeholder="Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor." required=""></textarea>
+            <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+          </fieldset>
+          <input type="submit" value="Submit">
+        </form>
       </div>
     </div>
-    </div>
-
-    <div class="home-callout">
-      <div class="blank-space"></div>
-      <div class="callout-copy">
-        <h1 class="callout-title">My Story</h1>
-        <p>I have nearly 10 years’ experience working as a teacher, facilitator, coach, consultant and mentor, and at the heart of what I do is to help people & organisations reach their full potential. I work with those who are aspiring to make changes, whether that relates to achieving specific goals, overcoming challenges, shifting mindset, or transforming the way they live, work and operate. At the heart of what I do is to help people create meaning and impact in their lives and work. <span>Often, this means guiding them to evaluate their definition of “success” and what it looks like for them, and then, through powerful conversations and insight, helping them to move towards this.</span></p>
-        <ul>
-          <li id="call-action"><a href="/">Get in Touch</a></li>
-        </ul>
-      </div>
-      <div class="callout-image">
-        <img src="images/profile_crop.jpg">
-      </div>
-      <div class="blank-space"></div>
-    </div>
-
-    <div class="services-section">
-      <div class="services-header">
-        <h1>My Services</h1>
-      <div class="services-copy-wrapper">
-        <div class="services-box services-indiv">
-          <div class="services-images">
-            <a><img src="images/individuals.jpg" alt="Coaching for Individuals"></a>
-        </div>
-          <div class="services-title">
-            <h3><a href="">Coaching for Individuals</a></h3>
-          </div>
-        </div>
-        <div class="services-box services-orgs">
-          <div class="services-images">
-            <a><img src="images/organisations.jpg" alt="Coaching for Individuals"></a>
-        </div>
-          <div class="services-title">
-            <h3><a href="">Coaching in Organisations</ahref=""></h3>
-          </div>
-        </div>
-        <div class="services-box services-other">
-          <div class="services-images">
-            <a><img src="images/workshops.jpg" alt="Coaching for Individuals"></a>
-        </div>
-          <div class="services-title">
-            <h3><a href="">Facilitation, Workshops & Guest Speaking</a></h3>
-          </div>
-        </div>
-        </div>
-        </div>
-    </div>
-
-    <div class="testimonial-wrapper">
-      <div class="testimonial-box testimonial-image">
-        <a class="quote"href="/"><img src="images/quote.png"></a>
-      </div>
-      <div class="testimonial-box testimonial-copy">
-        <p>
-          One of my biggest struggles has been my finances, not knowing how to prioritise my spending and struggling to save for my future. Working with Sammy has been truly life changing and helped me put in place techniques that even after one session, I saw a difference, not only in my spending habits, but my attitude to money in general. This has been an issue I’ve faced for many years, and have never been able to tackle it. Without her help, I would never have been able to do it alone. I am looking forward to continuing to work with her and seeing improvements in my everyday life and happiness.
-        </p>
-      </div>
-      <div class="testimonial-box testimonial-author">
-        <h2>Meghan Emily</h2>
-      </div>
-      <div class="testimonial-box testimonial-call">
-        <ul>
-          <li id="call-action"><a href="/">Read Testimonials</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="contact-wrapper">
-      <div class="contact-image">
-        
-      </div>
-      <div class="contact-copy">
-        
-        <div class="contact-copy-text">
-          <h1>Learn More</h1>
-          <p>Want to learn more about the work I do<span>, what coaching involves</span> and and how you might benefit from working with me? Get in touch using the contact form below.
-        </div>
-            
-        <div class="contact-copy-form">
-          <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/samantha@hawkins.net" method="post">
-            <fieldset id="fs-frm-inputs">
-              <label class="form-text" for="full-name">Full Name</label>
-              <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
-              <label class="form-text" for="phone-number">Phone Number</label>
-              <input type="tel" name="number" id="phone-number" placeholder="Include country code" required="">
-              <label class="form-text" for="email-address">Email Address</label>
-              <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required="">
-              <label class="form-text" for="message">Message</label>
-              <textarea rows="5" name="message" id="message" placeholder="Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor." required=""></textarea>
-              <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
-            </fieldset>
-            <input type="submit" value="Submit">
-          </form>
-      </div>
-
-        <!-- <div class="contact-mobile-flex contact-flex-one">
-          <h1>Learn More</h1>
-          <p>Want to learn more about the work I do <span>, what coaching involves</span> and and how you might benefit from working with me? Have a look at some of the most frequently asked questions.
-          <div class="contact-form-call faq-call">
-            <ul>
-              <li id="call-action"><a href="/">FAQs</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="contact-mobile-flex contact-flex-two">
-          <h1>Get In Touch</h1>
-          <p>If you want to understand more about the logistics and various coaching packages, get in touch with me for a free no-obligation coaching session. <span>This first session is always free; it will give you a chance to really experience coaching, and will create the opportunity for both of us to see if we are the right fit.</span></p>
-          <div class="contact-form-call">
-            <ul>
-              <li id="call-action"><a href="/">Get in Touch</a></li>
-            </ul>
-          </div>
-        </div> -->
-      </div>
-    </div>
-
-    </div>
-
-    <footer class="footer">
-      <nav>
-        <ul class="footer-nav nav-links">
-          <li><a href="/">Home</a></li>
-          <li><a href="/">About Me</a></li>
-          <li><a href="/">Blog</a></li>
-          <li><a href="/">Testimonials</a></li>
-        </ul>
-        </nav>
-        <h4>©2020 by Samantha Hawkins. <span>Proudly created by Stephen Kaye, a very satisfied client.</span></h4>
-    </footer>
-
-  </body>
-</html>
+  </div>

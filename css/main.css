@@ -50,7 +50,12 @@ a img {
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100%;
+  min-height: 100vh;
+}
+.content-container {
+  flex-grow: 1;
+  padding-top: 15vh;
+  width: 100%;
 }
 a {
   color: #4C4C4C;
@@ -239,8 +244,17 @@ h1, h2, h3, h4, h5, h6, p, li {
   background-size: cover;
   box-sizing: border-box;
   flex: 1 1 auto;
-  height: 100vh;
-  padding-top: 14vh;
+  height: 85vh;
+  /* padding-top: 14vh; */
+}
+.full-hero:after {
+  bottom: 2vh;
+  color: #fff;
+  content: "﹀";
+  font-size: 36px;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, 0);
 }
 .hero-home {
   background-image: url('../images/hero3.jpg');
@@ -265,9 +279,9 @@ h1, h2, h3, h4, h5, h6, p, li {
 .home-callout {
   display: flex;
   flex: 1 1 auto;
-  min-height: 86vh;
-  position: relative;
-  width: 100%;
+  min-height: 85vh;
+  /* position: relative; */
+  /* width: 100%; */
   /* consider doing min-height at 100vh and add padding to top */
 }
 .blank-space {
@@ -311,7 +325,6 @@ h1, h2, h3, h4, h5, h6, p, li {
 }
 .callout-image {
   flex: 1 2 0;
-  /* max-height: 50vh;; */
 }
 .callout-image img {
   margin-bottom: 4vh;
@@ -338,8 +351,8 @@ h1, h2, h3, h4, h5, h6, p, li {
 .services-section {
   display: flex;
   flex: 1 1 auto;
-  min-height: 86vh;
-  width: 100vw;
+  min-height: 85vh;
+  /* width: 100vw; */
   /* consider doing min-heigh at 100vh and add padding to top */
 }
 .services-header {
@@ -363,12 +376,14 @@ h1, h2, h3, h4, h5, h6, p, li {
   text-align: center;
 }
 .services-copy-wrapper {
+  align-items: center;
   background-color: rgb(240, 240, 240);
   box-sizing: border-box;
   display: flex;
   flex: 1 1 0;
   justify-content: center;
   min-height: 80%;
+  width: 100%;
 }
 .services-box {
   align-items: center;
@@ -380,8 +395,8 @@ h1, h2, h3, h4, h5, h6, p, li {
 }
 .services-images img {
   border-radius: 50%;
-  width: 280px;
-  height: 280px;
+  width: 25vw;
+  height: 25vw;
   object-fit: cover;
 }
 
@@ -392,8 +407,8 @@ h1, h2, h3, h4, h5, h6, p, li {
   flex: 1 1 auto;
   flex-direction: column;
   text-align: center;
-  min-height: 86vh;
-  width: 100%;
+  min-height: 85vh;
+  /* width: 100%; */
   /* consider doing min-heigh at 100vh and add padding to top */
 }
 .testimonial-image {
@@ -435,7 +450,7 @@ h1, h2, h3, h4, h5, h6, p, li {
 .contact-wrapper {
   display: flex;
   flex: 1 1 0;
-  min-height: 86vh;
+  min-height: 85vh;
   text-align: center;
   width: 100%;
   /* consider doing min-height at 100vh and add padding to top */
@@ -509,7 +524,6 @@ input[type=submit]:hover {
 /* FOOTER STYLES */
 .footer {
   background-color:#4c4c4c;
-  flex: 1;
   min-height: 10vh;
   padding: 5vh 0 4vh;
 }
@@ -538,6 +552,22 @@ input[type=submit]:hover {
   font-size: 1rem;
 }
 
+/* ABOUT PAGE STYLES */
+.about-wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 3vh 3vw;
+}
+.about-image {
+  flex: 1 1 0;
+}
+.about-image img {
+  border-radius: 50%;
+  height: 30vh;
+  width: 30vw;
+}
+
 /* MEDIA STYLES */
 
 @media (max-width: 1050px) {
@@ -546,42 +576,46 @@ input[type=submit]:hover {
 
 .home-callout {
   flex-direction: column-reverse;
+  min-height: 100vh;
+}
+.blank-space {
+  display: none;
 }
 .callout-image{
+  align-items: center;
   background-color: rgb(240, 240, 240);
-  flex: 1 1 0;
-  min-height: 43vh;
+  flex: 0 1 0;
   text-align: center;
 }
 .callout-image img {
   border-radius: 50%;
-  width: 45vw;
-  height: 45vw;
+  width: 40vw;
+  height: 40vw;
   object-fit: cover ;
 }
-/* .callout-image img {
-  display: none;
-} */
 .callout-copy {
+  align-items: center;
   background-color: rgb(220, 220, 220);
   flex: 1 1 0;
-  margin: 0;
-  min-height: 43vh;
+  margin-bottom: 0;
+  margin-top: 0;
+  max-height: 190vw;
   min-width: 100vw;
-  padding: 0;
 }
 .callout-copy .callout-title {
   font-size: 2rem;
   font-weight: 400;
-  padding: 4rem 0.4rem 1rem;
+  padding: 2rem 0.4rem 1rem;
   text-align: center;
   text-transform: uppercase;
 }
 .callout-copy p {
   font-weight: 100;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   line-height: 1.6;
-  padding: 2vh 10vw 2vh;
+  max-height: 55vh;
+  overflow: scroll;
+  padding: 2vh 8vw 2vh;
   text-align: center;
 }
 .callout-copy ul {
@@ -691,53 +725,6 @@ input[type=submit]:hover {
     background-size: cover;
 }
 
-/* CALLOUT STYLES - MAX 900PX */
-
-.home-callout {
-  flex-direction: column-reverse;
-}
-.callout-image{
-  background-color: rgb(240, 240, 240);
-  flex: 1 1 0;
-  min-height: 43vh;
-  text-align: center;
-}
-.callout-image img {
-  border-radius: 50%;
-  width: 45vw;
-  height: 45vw;
-  object-fit: cover ;
-}
-/* .callout-image img {
-  display: none;
-} */
-.callout-copy {
-  background-color: rgb(220, 220, 220);
-  flex: 1 1 0;
-  margin: 0;
-  min-height: 43vh;
-  min-width: 100vw;
-  padding: 0;
-}
-.callout-copy .callout-title {
-  font-size: 1.8rem;
-  font-weight: 400;
-  padding: 3rem 0.4rem 1rem;
-  text-align: center;
-  text-transform: uppercase;
-}
-.callout-copy p {
-  font-weight: 100;
-  font-size: 1rem;
-  line-height: 1.6;
-  padding: 2vh 10vw 2vh;
-  text-align: center;
-}
-.callout-copy ul {
-  padding: 2vh 5vw 2vh;
-  text-align: center;
-}
-
 /* SERVICES STYLES - MAX 900PX */
 .services-section {
   min-height: 86vh;
@@ -798,49 +785,6 @@ input[type=submit]:hover {
 
 @media (max-width: 450px) {
 
-/* CALLOUT STYLES - MAX 450PX */
-.home-callout {
-  display: flex;
-  flex-direction: column-reverse;
-}
-.callout-image{
-  background-color: rgb(240, 240, 240);
-  flex: 1 1 0;
-  text-align: center;
-}
-.callout-image img {
-  border-radius: 50%;
-  width: 60vw;
-  height: 60vw;
-  object-fit: cover ;
-}
-.callout-copy {
-  background-color: rgb(220, 220, 220);
-  flex: 1 1 0;
-  margin: 0;
-  margin-top: 0;
-  min-height: 86vh;
-  min-width: 100vw;
-}
-.callout-copy .callout-title {
-  font-size: 1.6rem;
-  font-weight: 400;
-  padding: 2rem 2rem 1rem;
-  text-transform: uppercase;
-}
-.callout-copy p {
-  font-weight: 100;
-  font-size: 1.05rem;
-  line-height: 1.6;
-  padding: 1rem 2rem 1rem;
-  text-align: center;
-}
-.callout-copy p > span {
-  display: none;
-}
-.callout-copy ul {
-  padding: 2rem 0.5rem 0;
-}
 
 /* CONTACT STYLES - MAX 450 */
 .contact-wrapper {
