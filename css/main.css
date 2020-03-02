@@ -278,7 +278,7 @@ h1, h2, h3, h4, h5, h6, p, li {
   background-color: rgba(240, 240, 240, 1);
   box-sizing: border-box;
   flex: 1 0 auto;
-  padding: 1em 3em;
+  padding: 3vh 4vw;
   margin-bottom: 4vh;
   margin-top: 4vh;
   max-height: 78vh;
@@ -289,25 +289,25 @@ h1, h2, h3, h4, h5, h6, p, li {
 .callout-copy .callout-title {
   font-size: 1.4vw;
   font-weight: 400;
-  padding: 1.5rem 1.5rem 1rem;
+  padding: 2vh 2vw 2vh;
   text-transform: uppercase;
 }
 .callout-copy p {
   font-weight: 100;
-  font-size: 2.2vh;
-  line-height: 1.8rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
   max-height: 60%;
   overflow: scroll;
-  padding: 1rem 1.5rem 0;
+  padding: 2vh 2vw 0;
   text-align: justify;
 }
 /* .callout-copy p span {
   font-weight: 400;
 } */
 .callout-copy > ul {
-  padding: 1rem 1.5rem 0;
-  position: relative;
-  bottom: -10%;
+  padding: 5vh 2vw 0;
+  /* position: relative;
+  bottom: -10%; */
 }
 .callout-image {
   flex: 1 2 0;
@@ -328,7 +328,7 @@ h1, h2, h3, h4, h5, h6, p, li {
   background-color: transparent;
   color: #4C4C4C;
   font-family: 'Raleway', Helvetica, sans-serif;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   text-decoration: none;
   text-align: center;
 }
@@ -540,6 +540,57 @@ input[type=submit]:hover {
 
 /* MEDIA STYLES */
 
+@media (max-width: 1050px) {
+
+/* CALLOUT STYLES - MAX 1050PX */
+
+.home-callout {
+  flex-direction: column-reverse;
+}
+.callout-image{
+  background-color: rgb(240, 240, 240);
+  flex: 1 1 0;
+  min-height: 43vh;
+  text-align: center;
+}
+.callout-image img {
+  border-radius: 50%;
+  width: 45vw;
+  height: 45vw;
+  object-fit: cover ;
+}
+/* .callout-image img {
+  display: none;
+} */
+.callout-copy {
+  background-color: rgb(220, 220, 220);
+  flex: 1 1 0;
+  margin: 0;
+  min-height: 43vh;
+  min-width: 100vw;
+  padding: 0;
+}
+.callout-copy .callout-title {
+  font-size: 2rem;
+  font-weight: 400;
+  padding: 4rem 0.4rem 1rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+.callout-copy p {
+  font-weight: 100;
+  font-size: 1.3rem;
+  line-height: 1.6;
+  padding: 2vh 10vw 2vh;
+  text-align: center;
+}
+.callout-copy ul {
+  padding: 2vh 5vw 2vh;
+  text-align: center;
+}
+
+}
+
 @media (max-width: 900px) {
  
   /* HEADER STYLES - MAX 900PX */
@@ -642,33 +693,49 @@ input[type=submit]:hover {
 
 /* CALLOUT STYLES - MAX 900PX */
 
+.home-callout {
+  flex-direction: column-reverse;
+}
 .callout-image{
-  flex: 0 1 auto;
+  background-color: rgb(240, 240, 240);
+  flex: 1 1 0;
+  min-height: 43vh;
+  text-align: center;
+}
+.callout-image img {
+  border-radius: 50%;
+  width: 45vw;
+  height: 45vw;
+  object-fit: cover ;
 }
 /* .callout-image img {
   display: none;
 } */
 .callout-copy {
-  flex: 2 1 0;
-  min-height: 76vh;
-  min-width: 70vw;
+  background-color: rgb(220, 220, 220);
+  flex: 1 1 0;
+  margin: 0;
+  min-height: 43vh;
+  min-width: 100vw;
+  padding: 0;
 }
 .callout-copy .callout-title {
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   font-weight: 400;
-  padding: 2rem 0.4rem 1rem;
+  padding: 3rem 0.4rem 1rem;
   text-align: center;
   text-transform: uppercase;
 }
 .callout-copy p {
   font-weight: 100;
-  font-size: 2vh;
-  line-height: 1.6rem;
-  padding: 1rem 0.4rem 0;
-  text-align: justify;
+  font-size: 1rem;
+  line-height: 1.6;
+  padding: 2vh 10vw 2vh;
+  text-align: center;
 }
 .callout-copy ul {
-  padding: 0 0.4rem 2rem;
+  padding: 2vh 5vw 2vh;
+  text-align: center;
 }
 
 /* SERVICES STYLES - MAX 900PX */
@@ -743,8 +810,8 @@ input[type=submit]:hover {
 }
 .callout-image img {
   border-radius: 50%;
-  width: 280px;
-  height: 280px;
+  width: 60vw;
+  height: 60vw;
   object-fit: cover ;
 }
 .callout-copy {
@@ -756,17 +823,20 @@ input[type=submit]:hover {
   min-width: 100vw;
 }
 .callout-copy .callout-title {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 400;
-  padding: 1rem 0.5rem 1rem;
+  padding: 2rem 2rem 1rem;
   text-transform: uppercase;
 }
 .callout-copy p {
   font-weight: 100;
-  font-size: 3.8vw;
-  line-height: 1.5rem;
-  padding: 1rem 0.4rem 0;
-  text-align: justify;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  padding: 1rem 2rem 1rem;
+  text-align: center;
+}
+.callout-copy p > span {
+  display: none;
 }
 .callout-copy ul {
   padding: 2rem 0.5rem 0;
@@ -793,15 +863,20 @@ input[type=submit]:hover {
 /* CALLOUT STYLES - MAX 350PX */
 .callout-copy p {
   font-weight: 100;
-  font-size: 3.7vw;
+  font-size: 0.9rem;
   line-height: 1.4rem;
-  max-height: 60vh;
   overflow: scroll;
-  padding: 0.6rem 0.3rem 0;
-  text-align: justify;
+  padding: 0.6rem 1.8rem 0;
+  text-align: center;
 }
 .callout-copy p > span {
   display: none;
+}
+.callout-copy .callout-title {
+  font-size: 1.4rem;
+  font-weight: 400;
+  padding: 2rem 2rem 1rem;
+  text-transform: uppercase;
 }
 .callout-copy ul {
   padding: 2rem 0.3rem 0;
