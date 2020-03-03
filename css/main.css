@@ -560,12 +560,50 @@ input[type=submit]:hover {
   padding: 3vh 3vw;
 }
 .about-image {
+  align-items: center;
   flex: 1 1 0;
+  text-align: center;
 }
 .about-image img {
   border-radius: 50%;
-  height: 30vh;
-  width: 30vw;
+  height: 20vw;
+  width: 20vw;
+}
+.about-copy {
+  line-height: 1.85;
+  padding: 3vh 20vw;
+  text-align: center;
+}
+.about-copy h1 {
+  font-size: 2rem;
+  padding-bottom: 1.5rem;
+}
+.about-copy p {
+  font-size: 1rem;
+  font-weight: 100;
+}
+.about-copy-text {
+  padding: 2vh 0;
+}
+.about-copy-list {
+  list-style: none;
+  padding: 1vh 0 3vh;
+}
+.about-copy-list li {
+  font-weight: 100;
+  padding: 1vh 0;
+}
+.about-copy-strong {
+  border: 1px solid #4c4c4c;
+  padding: 2vh 2vw;
+}
+.about-copy-strong:hover {
+  background-color: #4c4c4c;
+  color: #fff;
+  /* font-weight: 400; */
+}
+.about-call {
+  padding-top: 5vh;
 }
 
 /* MEDIA STYLES */
@@ -781,6 +819,12 @@ input[type=submit]:hover {
 .contact-copy p {
   font-size: 1rem;
 }
+
+/* ABOUT PAGE STYLES */
+.about-copy {
+  padding: 3vh 10vw;
+}
+
 }
 
 @media (max-width: 450px) {
@@ -798,6 +842,26 @@ input[type=submit]:hover {
 }
 .footer h4 {
   padding-top: 1.8rem;
+}
+
+/* ABOUT PAGE STYLES */
+.about-copy {
+  padding: 3vh 6vw;
+}
+.about-image img {
+  height: 50vw;
+  width: 50vw;
+}
+.about-copy h1 {
+  font-size: 2rem;
+}
+.about-copy p {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+.about-copy-list li {
+  font-size: 0.9rem;
+  font-weight: 400;
 }
 
 }
