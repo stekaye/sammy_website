@@ -669,6 +669,52 @@ input[type=submit]:hover {
   font-weight: bold;
 }
 
+/* FAQ PAGE STYLES */
+.faq-wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 86vh;
+  width: 100%;
+}
+.faq-wrapper h1 {
+  font-size: 2.5rem;
+  padding: 8vh 0 8vh;
+  text-align: center;
+}
+.faq-box {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+}
+.faq-image {
+  flex: 0 1 auto;
+}
+.faq-image img {
+  height: 7vh;
+  padding-bottom: 6vh;
+  padding-top: 5vh;
+}
+.faq-copy {
+  border-bottom: 1px dotted rgba(76, 76, 76, 0.2);
+  flex: 1;
+  padding-bottom: 5vh;
+}
+.faq-copy:last-child {
+  border-bottom: none;
+}
+.faq-copy p {
+  font-weight: 100;
+  line-height: 1.8;
+  padding: 4vh 25vw 2vh;
+}
+.faq-copy h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
 
 
 /* MEDIA STYLES */
