@@ -957,6 +957,12 @@ input[type=submit]:hover {
   min-height: 130vh;
 }
 
+/* SERVICES STYLES - MAX 450 */
+.services-images img {
+  width: 70vw;
+  height: 70vw;
+}
+
 /* FOOTER STYLES - MAX 450PX */
 .footer {
   padding: 4vh 0 3vh;
