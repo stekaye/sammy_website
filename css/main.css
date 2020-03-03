@@ -606,6 +606,71 @@ input[type=submit]:hover {
   padding-top: 5vh;
 }
 
+/* TESTIMONIALS PAGE STYLES */
+.testimonials-page-wrapper {
+  align-items: center;
+  border: 3vw solid #fff;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 86vh;
+  width: 100%;
+}
+.testimonials-page-wrapper h1 {
+  background-color: #ffaf06;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 2.5rem;
+  padding: 8vh 0 8vh;
+  text-align: center;
+  vertical-align: middle;
+  width: 100%;
+}
+.testimonials-page-line {
+  align-items: flex-start;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  min-height: 43vh;
+  padding: 2vh 3vw 0;
+  width: 100%;
+}
+.testimonials-page-box {
+  align-items: center;
+  color: #4c4c4c;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 4vh 4vw;
+  width: 50%;
+}
+.testimonials-page-box:hover {
+  border: 1px solid #ffaf06;
+  background-color: #ffaf06;
+  color: #fff;
+}
+.testimonials-page-image {
+  flex: 1;
+}
+.testimonials-page-image img {
+  height: 7vh;
+  padding-bottom: 4vh;
+}
+.testimonials-page-copy {
+  flex: 1;
+  text-align: center;
+}
+.testimonials-page-copy p {
+  line-height: 1.8;
+  padding-bottom: 4vh;
+}
+.testimonials-page-copy h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+
+
 /* MEDIA STYLES */
 
 @media (max-width: 1050px) {
@@ -820,9 +885,19 @@ input[type=submit]:hover {
   font-size: 1rem;
 }
 
-/* ABOUT PAGE STYLES */
+/* ABOUT PAGE STYLES - MAX 900PX */
 .about-copy {
   padding: 3vh 10vw;
+}
+
+/* TESTIMONIALS PAGE STYLES - MAX 900PX */
+.testimonials-page-line {
+  flex-direction: column;
+  min-height: 43vh;
+  padding: 2vh 0 0;
+}
+.testimonials-page-box {
+  width: 90%;
 }
 
 }
