@@ -363,29 +363,29 @@ h4, h5, h6, p, li {
   /* consider doing min-heigh at 100vh and add padding to top */
 }
 .services-header {
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   flex: 1 1 0;
   max-height: 25%;
 }
 .services-header h1 {
   background-color: #6b6b6b;
   color: #fff;
-  font-size: 2.2rem;
-  font-weight: 400;
-  padding: 9vh 0;
+  font-size: 2.4rem;
+  font-weight: 500;
+  padding: 10vh 0;
   text-align: center;
 }
 .services-title h3 {
   font-size: 1.3rem;
   font-weight: 400;
   line-height: 1.6;
-  padding: 6vh 2vw 2vh;
+  padding: 4vh 2vw 2vh;
   text-align: center;
 }
 .services-copy-wrapper {
   align-items: top;
   background-color: rgb(240, 240, 240);
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   display: flex;
   flex: 1 1 0;
   /* justify-content: center; */
@@ -395,16 +395,16 @@ h4, h5, h6, p, li {
 .services-box {
   align-items: center;
   flex: 1;
-  padding: 5vh 3vh 2vh;
+  padding: 7vh 3vh 5vh;
 }
 .services-images {
-  padding-top: 2vh;
+  padding: 3vh 0;
   text-align: center;
 }
 .services-images img {
   border-radius: 50%;
-  width: 18vw;
-  height: 18vw;
+  width: 30vh;
+  height: 30vh;
   object-fit: cover;
 }
 
@@ -735,6 +735,37 @@ input[type=submit]:hover {
 
 /* MEDIA STYLES */
 
+@media (max-width: 1484px) {
+  /* SERVICES STYLES - MAX WIDTH 1366PX */
+  /* .services-header h1 {
+    font-size: 2.5rem;
+    padding: 8vh 0;
+  }
+  .services-images img {
+    width: 18vw;
+    height: 18vw;
+  }
+  .services-title h3 {
+    font-size: 1.6rem;
+  } */
+  }
+  
+
+@media (max-width: 1370px) {
+/* SERVICES STYLES - MAX WIDTH 1366PX */
+.services-header h1 {
+  font-size: 2.5rem;
+  padding: 8vh 0;
+}
+.services-images img {
+  width: 15vw;
+  height: 15vw;
+}
+.services-title h3 {
+  font-size: 1.6rem;
+}
+}
+
 @media (max-width: 1050px) {
 
 /* CALLOUT STYLES - MAX 1050PX */
@@ -788,15 +819,11 @@ input[type=submit]:hover {
   text-align: center;
 }
 
-/* SERVICES STYLES - MAX 1050PX */
-.services-section {
-  min-height: 86vh;
-  max-width: 100vw;
-}
+/* SERVICES STYLES - MAX WIDTH 1050PX */
 .services-copy-wrapper {
   flex-direction: column;
   justify-content: center;
-  /* min-height: 85%; */
+  min-height: 85%;
 }
 .services-box ~ .services-box {
     border-top: 0.5px dotted rgba(76, 76, 76, 0.3);
@@ -805,15 +832,16 @@ input[type=submit]:hover {
   padding: 4vh 3vw;
 }
 .services-header h1 {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
 }
 .services-images img {
-  width: 55vw;
-  height: 55vw;
+  width: 37vh;
+  height: 37vh;
 }
 .services-title h3 {
   font-size: 2rem;
 }
+ 
 
 }
 
@@ -932,9 +960,6 @@ input[type=submit]:hover {
 .contact-wrapper {
   flex-direction: column-reverse;
 }
-/* .contact-image {
-  display: none;
-} */
 .contact-copy p {
   font-size: 1rem;
 }
@@ -988,17 +1013,14 @@ input[type=submit]:hover {
 /* SERVICES STYLES - MAX 450 */
 .services-header h1 {
   font-size: 2rem;
-  padding: 8vh 0;
+  padding: 7vh 0;
 }
 .services-images {
   padding-top: 3vh;
 }
 .services-images img {
-  width: 65vw;
-  height: 65vw;
-}
-.services-header h1 {
-  font-size: 2rem;
+  width: 35vh;
+  height: 35vh;
 }
 .services-title h3 {
   font-size: 1.5rem;
@@ -1079,6 +1101,15 @@ input[type=submit]:hover {
   padding: 2rem 0.3rem 0;
 }
 
+/* SERVICES STYLES - MAX 350 */
+.services-header h1 {
+  font-size: 1.6rem;
+}
+.services-title h3 {
+  font-size: 1.3rem;
+  padding: 4vh 3vw 3vh;
+}
+
 /* TESTIMONIAL STYLES - WIDTH 350PX */
 #testimonial-copy-mobile p {
   font-size: 1rem;
@@ -1113,7 +1144,7 @@ input[type=submit]:hover {
 
 @media (max-height: 800px) {
 
-  /* CONTACT STYLES - MAX 800PX HEIGHT */
+/* CONTACT STYLES - MAX 800PX HEIGHT */
   .contact-wrapper {
     /* min-height: 105vh; */
   }
@@ -1124,25 +1155,26 @@ input[type=submit]:hover {
 
 /* TESTIMONIAL STYLES - MAX HEIGHT 800PX */
   .testimonial-copy p {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
   .testimonial-author h2 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
 }
 
 @media (max-height: 610px) {
 
-  /* TESTIMONIAL STYLES - MAX HEIGHT 800PX */
+
+  /* TESTIMONIAL STYLES - MAX HEIGHT 610PX */
   .testimonial-copy p {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   .testimonial-author h2 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
-  /* CONTACT STYLES - MAX 600PX HEIGHT */
+  /* CONTACT STYLES - MAX HEIGHT 610PX */
   .contact-wrapper {
     min-height: 150vh;
   }
