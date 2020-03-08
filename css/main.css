@@ -310,7 +310,7 @@ h4, h5, h6, p, li {
 .callout-copy p {
   background-color: rgb(240, 240, 240);
   font-weight: 300;
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   line-height: 1.6;
   padding: 2vh 4vw 0 4vw;
   text-align: justify;
@@ -360,7 +360,7 @@ h4, h5, h6, p, li {
 .services-header h1 {
   background-color: #6b6b6b;
   color: #fff;
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   font-weight: 500;
   padding: 10vh 0;
   text-align: center;
@@ -418,11 +418,11 @@ h4, h5, h6, p, li {
 .testimonial-copy {
   /* box-sizing: border-box; */
   flex: 1 1 0;
-  padding: 6vh 12vw 0;
+  padding: 6vh 16vw 0;
 }
 .testimonial-copy p {
   color: #fff;
-  font-size: 1.4rem;
+  font-size: 1.15rem;
   font-weight: 400;
   line-height: 2;
   /* overflow: scroll; */
@@ -438,7 +438,7 @@ h4, h5, h6, p, li {
 }
 .testimonial-author h2 {
   color: #fff;
-  font-size: 1.7rem;
+  font-size: 1.3rem;
   font-weight: 500;
   line-height: 1;
 }
@@ -450,9 +450,11 @@ h4, h5, h6, p, li {
 
 /* CONTACT FORM STYLES */
 .contact-wrapper {
+  align-content: flex-start;
   display: flex;
   flex: 1 1 0;
-  min-height: 85vh;
+  min-height: 86vh;
+  max-height: 200vh;
   text-align: center;
   width: 100%;
   /* consider doing min-height at 100vh and add padding to top */
@@ -471,17 +473,20 @@ h4, h5, h6, p, li {
   display: flex;
   flex: 3 1 0;
   flex-direction: column;
-  padding: 3vh 0 2vh;
+  padding-bottom: 4vh;
 }
 .contact-copy h1 {
-  font-size: 1.6rem;
-  font-weight: 400;
+  font-size: 2.2rem;
+  font-weight: 500;
 }
 .contact-copy p {
-  font-size: 0.95rem;
-  font-weight: 300;
-  line-height: 1.4;
-  padding: 3vh 8vw 5vh;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  padding: 4vh 10vw 6vh;
+}
+.contact-copy-text {
+  padding-top: 4vh;
 }
 
 /* Style inputs with type="text", select elements and textareas */
@@ -504,6 +509,7 @@ input[type=submit] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-size: 1rem;
 }
 
 /* When moving the mouse over the submit button, add a darker green color */
@@ -515,12 +521,13 @@ input[type=submit]:hover {
 .contact-copy-form{
   border-radius: 5px;
   background-color: #fff;
-  padding: 0 12vw 2vh;
+  padding: 0 16vw 2vh;
 
 }
-.form-text {
+label {
   font-family: 'Raleway', Helvetica, sans-serif;
-  font-size: 0.9rem;
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 /* FOOTER STYLES */
@@ -732,6 +739,69 @@ input[type=submit]:hover {
 
 @media (max-width: 1050px) {
 
+/* MOBILE MENU - MAX 1050PX */
+.show-mobile-menu {
+  display: block;
+  float: right;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 5vh;
+  padding: 2rem;
+  position: relative;
+  text-transform: uppercase;
+}
+.show-mobile-menu li {
+  vertical-align: middle;
+}
+.header-nav {
+  background-color: #fff;
+  box-sizing: border-box;
+  left: 0;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  top: 15vh;
+  transition: all 0.5s ease-in-out;
+  width: 100vw;
+  z-index: 9;
+}
+.header-nav li {
+  display: block;
+  margin-top: 1em;
+}
+.header-nav li{
+  border: 0;
+  padding: 0;
+}
+.header-nav li:last-child {
+  margin-bottom: 1em;
+}
+
+/* HIDE DROPDOWN IN THE NAV MENU */
+.header-nav .dropdown:hover .drop-menu,
+.header-nav .drop-trigger:after {
+  display: none;
+}
+.header-nav .drop-trigger {
+  padding-right: 0;
+}
+.mobile-menu-check:checked ~ .header-nav {
+  max-height: 1000px;
+}
+.mobile-menu-check:checked ~ .show-mobile-menu:after {
+  background-color: #fff;
+  color: #ed6e2f;
+  content: "CLOSE";
+  left: 0;
+  position: absolute;
+  top: 2em;
+  width: 100%;
+  text-align: center;
+}
+
+
 /* CALLOUT STYLES - MAX 1050PX */
 
 .home-callout {
@@ -831,66 +901,11 @@ input[type=submit]:hover {
   }
 
   /* MOBILE MENU - MAX 900PX */
-  .show-mobile-menu {
-    display: block;
-    float: right;
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-top: 1.5vh;
-    padding: 2em;
-    position: relative;
-    text-transform: uppercase;
-  }
-  .show-mobile-menu li {
-    vertical-align: middle;
-  }
-  .header-nav {
-    background-color: #fff;
-    box-sizing: border-box;
-    left: 0;
-    max-height: 0;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    text-align: center;
-    top: 15vh;
-    transition: all 0.5s ease-in-out;
-    width: 100vw;
-    z-index: 9;
-  }
-  .header-nav li {
-    display: block;
-    margin-top: 1em;
-  }
-  .header-nav li{
-    border: 0;
-    padding: 0;
-  }
-  .header-nav li:last-child {
-    margin-bottom: 1em;
-  }
-
-  /* HIDE DROPDOWN IN THE NAV MENU */
-  .header-nav .dropdown:hover .drop-menu,
-  .header-nav .drop-trigger:after {
-    display: none;
-  }
-  .header-nav .drop-trigger {
-    padding-right: 0;
-  }
-  .mobile-menu-check:checked ~ .header-nav {
-    max-height: 1000px;
-  }
-  .mobile-menu-check:checked ~ .show-mobile-menu:after {
-    background-color: #fff;
-    color: #ed6e2f;
-    content: "CLOSE";
-    left: 0;
-    position: absolute;
-    top: 2em;
-    width: 100%;
-    text-align: center;
-  }
+.show-mobile-menu {
+  font-size: 1.6rem;
+  margin-top: 5vh;
+  padding: 2rem;
+}
 
   /* HERO STYLES - MAX 900PX */
   .hero-content {
@@ -924,8 +939,18 @@ input[type=submit]:hover {
 .contact-wrapper {
   flex-direction: column-reverse;
 }
+.contact-copy {
+  min-height: 60vh;
+}
 .contact-copy p {
-  font-size: 1rem;
+  font-size: 1.1rem;
+  padding: 4vh 14vw 4vh;
+}
+.contact-image {
+  min-height: 30vh;
+}
+.contact-copy-form {
+  padding: 0 20vw 4vh;
 }
 
 /* ABOUT PAGE STYLES - MAX 900PX */
@@ -955,6 +980,12 @@ input[type=submit]:hover {
 }
 
 @media (max-width: 450px) {
+
+/* MOBILE MENU - MAX 450PX */
+.show-mobile-menu {
+  font-size: 1.4rem;
+  margin-top: 4vh;
+}
 
 /* HERO STYLES - MAX 900PX */
 .hero-content h1 {
@@ -1055,6 +1086,21 @@ input[type=submit]:hover {
   font-size: 1.4rem;
 }
 
+/* CONTACTS STYLES - MAX WIDTH 450PX */
+.contact-copy {
+  min-height: 60vh;
+}
+.contact-copy p {
+  font-size: 1.1rem;
+  padding: 4vh 8vw 3vh;
+}
+.contact-image {
+  min-height: 30vh;
+}
+.contact-copy-form {
+  padding: 3vh 20vw 5vh;
+}
+
 /* FAQ PAGE STYLES - MAX WIDTH 450PX */
 .faq-wrapper {
   border: none;
@@ -1083,7 +1129,21 @@ input[type=submit]:hover {
 
 }
 
+@media (max-width: 375px) {
+
+  /* MOBILE MENU - MAX 450PX */
+  .show-mobile-menu {
+    font-size: 1.1rem;
+    margin-top: 3.4vh;
+  }
+
 @media (max-width: 350px) {
+
+/* MOBILE MENU - MAX 450PX */
+.show-mobile-menu {
+  font-size: 1.1rem;
+  margin-top: 2.4vh;
+}
 
 /* CALLOUT STYLES - MAX 350PX */
 .callout-copy p {
@@ -1120,10 +1180,21 @@ input[type=submit]:hover {
 }
 
 /* CONTACT STYLES - MAX 350PX */
+.contact-copy {
+  /* min-height: 70vh; */
+}
+.contact-copy p {
+  font-size: 1rem;
+  padding: 4vh 7vw 3vh;
+}
 .contact-copy h1 {
-  font-size: 4vh;
-  padding-bottom: 2vh;
-  padding-top: 3vh;
+  font-size: 1.6rem;
+}
+.contact-image {
+  /* min-height: 30vh; */
+}
+.contact-copy-form {
+  padding: 3vh 20vw 5vh;
 }
 
 /* FOOTER STYLES - MAX 350PX */
@@ -1158,26 +1229,3 @@ input[type=submit]:hover {
 }
 
 }
-
-@media (max-height: 800px) {
-
-/* CONTACT STYLES - MAX 800PX HEIGHT */
-  .contact-wrapper {
-    /* min-height: 105vh; */
-  }
-  .contact-copy {
-    padding-top: 8vh;
-  }
-
-}
-
-@media (max-height: 610px) {
-
-  /* CONTACT STYLES - MAX HEIGHT 610PX */
-  .contact-wrapper {
-    min-height: 150vh;
-  }
-  .contact-copy {
-    padding-top: 4vh;
-  }
-  }
