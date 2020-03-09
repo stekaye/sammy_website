@@ -453,7 +453,7 @@ h4, h5, h6, p, li {
   align-content: flex-start;
   display: flex;
   flex: 1 1 0;
-  min-height: 86vh;
+  /* min-height: 86vh; */
   max-height: 200vh;
   text-align: center;
   width: 100%;
@@ -693,7 +693,7 @@ label {
 .faq-wrapper h1 {
   background-color: #ffaf06;
   color: #fff;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   padding: 8vh 0;
   text-align: center;
   width: 100%;
@@ -723,7 +723,7 @@ label {
   border-bottom: none;
 }
 .faq-copy p {
-  font-size: 1.4rem;
+  font-size: 1.15rem;
   font-weight: 300;
   line-height: 1.8;
   padding: 3vh 20vw 0;
@@ -734,6 +734,110 @@ label {
   padding-bottom: 2vh;
 }
 
+/* INDIVIDUAL COACHING STYLES */
+.individuals-wrapper {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.individuals-copy {
+  align-content: center;
+  background-color: rgb(230, 230, 230);
+  flex: 1;
+  line-height: 1.85;
+  padding: 5vh 22vw;
+  text-align: center;
+}
+.individuals-copy p {
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 2vh 0;
+}
+.individuals-copy-title {
+  background-color: #ffaf06;
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 500;
+  padding: 8vh 0;
+  text-align: center;
+  width: 100%;
+}
+.individuals-call {
+  padding: 5vh 5vw 2vw;
+}
+p .individuals-copy-strong {
+  font-size: 20rem;
+}
+.individuals-copy-strong:hover {
+  background-color: #f5ab33;
+  border: 1px solid #f5ab33;
+  color: #fff;
+  font-weight: 400;
+}
+.individuals-style-wrapper {
+  align-content: flex-start;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+}
+.style-image {
+  background-image: url(../images/coach_style.jpg);
+  background-position: center center;
+  background-size: cover;
+  flex: 1 1 0;
+  margin: 4vh 3vh 4vh 8vw;
+}
+.style-copy {
+  flex: 1 1 0;
+  line-height: 1.8;
+  margin: 4vh 8vw 4vh 3vw;
+  text-align: justify;
+}
+.style-copy h1 {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+.style-copy p {
+  font-size: 1rem;
+  padding: 2vh 0 0;
+}
+.style-call {
+  padding: 3vh 0;
+}
+.individuals-commitment-wrapper {
+  align-content: flex-start;
+  background-color: rgb(230, 230, 230);
+  display: flex;
+  flex: 1;
+  flex-direction: row-reverse;
+  width: 100%;
+}
+.commitment-image {
+  background-image: url(../images/commitment.jpg);
+  background-position: center center;
+  background-size: cover;
+  flex: 1 1 0;
+  margin: 6vh 8vw 6vh 2vw;
+}
+.commitment-copy {
+  flex: 1 1 0;
+  margin: 6vh 2vw 6vh 8vw;
+  text-align: center;
+}
+.commitment-copy h1 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding: 2vh 4vw 4vh;
+}
+.commitment-copy p {
+  font-size: 1rem;
+  line-height: 1.8;
+  padding: 2vh 2vw 0;
+}
 
 /* MEDIA STYLES */
 
@@ -819,7 +923,7 @@ label {
   height: 45vw;
   margin: 0;
   padding: 3vh 0;
-  object-fit: cover ;
+  object-fit: cover;
 }
 .callout-copy {
   align-items: center;
@@ -968,7 +1072,7 @@ label {
   width: 90%;
 }
 
-/* FAQ STYLES - MAX WIDTH 1050PX */
+/* FAQ STYLES - MAX WIDTH 900PX */
 .faq-copy p {
   font-size: 1.2rem;
   padding: 3vh 13vw 0;
@@ -976,6 +1080,64 @@ label {
 .faq-copy h3 {
   font-size: 1.5rem;
 }
+
+/* INDIVIDUALS STYLES - MAX WIDTH 900PX */
+.individuals-copy {
+  line-height: 1.8;
+  padding: 5vh 6vw;
+}
+.individuals-copy p {
+  font-size: 1rem;
+}
+.individuals-copy-title {
+  font-size: 1.8rem;
+}
+.individuals-call {
+  padding: 5vh 5vw 2vw;
+}
+.individuals-style-wrapper {
+  flex-direction: column;
+}
+.style-image {
+  margin: 0;
+  min-height: 35vh;
+}
+.style-copy {
+  margin: 0;
+  padding: 3vh 8vw;
+  text-align: center;
+}
+.style-copy h1 {
+  font-size: 1.3rem;
+  padding: 4vh 4vw 2vh;
+}
+.style-copy p {
+  font-size: 1rem;
+  padding: 2vh 0 0;
+}
+.style-call {
+  padding: 3vh 0;
+}
+.individuals-commitment-wrapper {
+  flex-direction: column;
+}
+.commitment-image {
+  margin: 0;
+  min-height: 35vh;
+}
+.commitment-copy {
+  margin: 0;
+  padding: 3vh 8vw;
+}
+.commitment-copy h1 {
+  font-size: 1.3rem;
+  padding: 4vh 4vw 2vh;
+}
+.commitment-copy p {
+  font-size: 1rem;
+  padding: 2vh 0;
+}
+
 
 }
 
