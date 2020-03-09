@@ -137,7 +137,7 @@ h4, h5, h6, p, li {
 }
 .header-nav a {
   font-family: 'Raleway', Helvetica, sans-serif;
-  font-size: 0.9em;
+  font-size: 1rem;
   color: #4C4C4C;
   text-decoration: none;
 }
@@ -148,7 +148,7 @@ h4, h5, h6, p, li {
 .drop-trigger,
 .show-mobile-menu {
   font-family: 'Raleway', Helvetica, sans-serif;
-  font-size: 0.9em;
+  font-size: 1rem;
   color: #4C4C4C;
   text-decoration: none;
 }
@@ -765,7 +765,7 @@ label {
   width: 100%;
 }
 .individuals-call {
-  padding: 5vh 5vw 2vw;
+  padding: 5vh 5vw 5vh;
 }
 p .individuals-copy-strong {
   font-size: 20rem;
@@ -806,7 +806,7 @@ p .individuals-copy-strong {
   padding: 2vh 0 0;
 }
 .style-call {
-  padding: 3vh 0;
+  padding: 3vh 0 5vh;
 }
 .individuals-commitment-wrapper {
   align-content: flex-start;
@@ -900,7 +900,7 @@ p .individuals-copy-strong {
   content: "CLOSE";
   left: 0;
   position: absolute;
-  top: 2em;
+  top: 1.15em;
   width: 100%;
   text-align: center;
 }
@@ -1010,6 +1010,9 @@ p .individuals-copy-strong {
   margin-top: 5vh;
   padding: 2rem;
 }
+.mobile-menu-check:checked ~ .show-mobile-menu:after {
+  top: 1.3em;
+}
 
   /* HERO STYLES - MAX 900PX */
   .hero-content {
@@ -1093,7 +1096,7 @@ p .individuals-copy-strong {
   font-size: 1.8rem;
 }
 .individuals-call {
-  padding: 5vh 5vw 2vw;
+  padding: 5vh 5vw 5vh;
 }
 .individuals-style-wrapper {
   flex-direction: column;
@@ -1116,7 +1119,7 @@ p .individuals-copy-strong {
   padding: 2vh 0 0;
 }
 .style-call {
-  padding: 3vh 0;
+  padding: 3vh 0 5vh;
 }
 .individuals-commitment-wrapper {
   flex-direction: column;
@@ -1138,6 +1141,13 @@ p .individuals-copy-strong {
   padding: 2vh 0;
 }
 
+
+}
+
+@media (max-width: 800px) {
+  .mobile-menu-check:checked ~ .show-mobile-menu:after {
+    top: 1.35em;
+  }
 
 }
 
@@ -1293,10 +1303,12 @@ p .individuals-copy-strong {
 
 @media (max-width: 375px) {
 
-  /* MOBILE MENU - MAX 450PX */
+/* MOBILE MENU - MAX 375PX */
   .show-mobile-menu {
-    font-size: 1.1rem;
     margin-top: 3.4vh;
+  }
+  .mobile-menu-check:checked ~ .show-mobile-menu:after {
+    top: 1.5em;
   }
 
 @media (max-width: 350px) {
@@ -1305,6 +1317,9 @@ p .individuals-copy-strong {
 .show-mobile-menu {
   font-size: 1.1rem;
   margin-top: 2.4vh;
+}
+.mobile-menu-check:checked ~ .show-mobile-menu:after {
+  top: 1.6em;
 }
 
 /* CALLOUT STYLES - MAX 350PX */
