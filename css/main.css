@@ -530,21 +530,54 @@ label {
 .footer {
   background-color:#4c4c4c;
   min-height: 10vh;
-  padding: 5vh 0 4vh;
+  padding: 4vh 0 4vh;
   width: 100%;
 }
 .footer h4 {
   color: rgb(240, 240, 240);
   font-size: 0.8rem;
   font-weight: 400;
-  padding-top: 5vh;
+  padding-top: 3vh;
   text-align: center;
 }
 .footer h4 span {
   display: block;
   padding-top: 2vh;
 }
-.footer-nav {
+footer p {
+  color: rgb(240, 240, 240);
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-align: center;
+}
+.social-list {
+  list-style: none;
+  padding-bottom: 2vh;
+  padding-top: 2vh;
+  text-align: center;
+}
+.social-list li {
+  background: rgba(150,150,150,0.5);
+  border-radius: 99px;
+  box-sizing: border-box;
+  display: inline-block;
+  font-size: 1.3rem;
+  font-weight: bold;
+  height: 2.4rem;
+  line-height: 1;
+  padding-top: 0.5em;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  width: 2.4rem;
+}
+.social-list li:hover {
+  background: rgba(255, 175, 6, 0.8)
+}
+.social-link {
+  color: #fff;
+}
+/* .footer-nav {
   text-align: center;
 }
 .footer-nav li {
@@ -556,7 +589,7 @@ label {
 .footer-nav a {
   color: #fff;
   font-size: 1rem;
-}
+} */
 
 /* ABOUT PAGE STYLES */
 .about-wrapper {
@@ -582,7 +615,7 @@ label {
 }
 .about-copy h1 {
   font-size: 2rem;
-  padding-bottom: 1.5rem;
+  /* padding-bottom: 1.5rem; */
 }
 .about-copy p {
   font-size: 1rem;
@@ -627,10 +660,9 @@ label {
   background-color: #ffaf06;
   box-sizing: border-box;
   color: #fff;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   padding: 8vh 0 8vh;
   text-align: center;
-  vertical-align: middle;
   width: 100%;
 }
 .testimonials-page-line {
@@ -688,6 +720,7 @@ label {
 }
 .faq-wrapper h1 {
   background-color: #ffaf06;
+  box-sizing: border-box;
   color: #fff;
   font-size: 2.2rem;
   padding: 8vh 0;
@@ -876,7 +909,7 @@ label {
   padding: 0;
   position: absolute;
   text-align: center;
-  top: 15vh;
+  top: 14vh;
   transition: all 0.5s ease-in-out;
   width: 100vw;
   z-index: 9;
@@ -993,6 +1026,14 @@ label {
   padding: 3vh 13vw 0;
 }
 
+}
+
+@media (max-width: 1024px) {
+
+  /* MOBILE MENU - MAX 1024PX */
+  .mobile-menu-check:checked ~ .show-mobile-menu:after {
+    top: 1.05em;
+  }
 }
 
 @media (max-width: 900px) {
@@ -1154,7 +1195,7 @@ label {
 
 @media (max-width: 800px) {
   .mobile-menu-check:checked ~ .show-mobile-menu:after {
-    top: 1.35em;
+    top: 1.3em;
   }
 
 }
@@ -1333,6 +1374,24 @@ label {
 
 }
 
+@media (max-width: 414px) {
+
+  /* MOBILE MENU - MAX 411PX */
+  .mobile-menu-check:checked ~ .show-mobile-menu:after {
+    top: 2em;
+  }
+
+}
+
+@media (max-width: 411px) {
+
+  /* MOBILE MENU - MAX 411PX */
+  .mobile-menu-check:checked ~ .show-mobile-menu:after {
+    top: 1.9em;
+  }
+
+}
+
 @media (max-width: 375px) {
 
 /* MOBILE MENU - MAX 375PX */
@@ -1340,8 +1399,18 @@ label {
     margin-top: 3.4vh;
   }
   .mobile-menu-check:checked ~ .show-mobile-menu:after {
-    top: 1.5em;
+    top: 1.9em;
   }
+}
+
+@media (max-width: 360px) {
+
+/* MOBILE MENU - MAX 360PX */
+.mobile-menu-check:checked ~ .show-mobile-menu:after {
+  top: 1.9em;
+}
+}
+    
 
 @media (max-width: 350px) {
 
@@ -1443,6 +1512,6 @@ label {
 
   /* MOBILE MENU - MAX 320PX */
   .mobile-menu-check:checked ~ .show-mobile-menu:after {
-    top: 1.7em;
+    top: 1.8em;
   }
 }
