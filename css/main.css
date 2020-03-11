@@ -137,7 +137,7 @@ h4, h5, h6, p, li {
 }
 .header-nav a {
   font-family: 'Raleway', Helvetica, sans-serif;
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #4C4C4C;
   text-decoration: none;
 }
@@ -148,7 +148,7 @@ h4, h5, h6, p, li {
 .drop-trigger,
 .show-mobile-menu {
   font-family: 'Raleway', Helvetica, sans-serif;
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #4C4C4C;
   text-decoration: none;
 }
@@ -450,11 +450,11 @@ h4, h5, h6, p, li {
 
 /* CONTACT FORM STYLES */
 .contact-wrapper {
-  align-content: flex-start;
+  align-content: center;
   display: flex;
   flex: 1 1 0;
-  /* min-height: 86vh; */
-  max-height: 200vh;
+  flex-direction: row;
+  min-height: 78vh;
   text-align: center;
   width: 100%;
   /* consider doing min-height at 100vh and add padding to top */
@@ -464,10 +464,6 @@ h4, h5, h6, p, li {
   background-image: url(../images/forest5.jpeg);
   background-size: cover;
   flex: 2 1 0;
-  /* min-height: 86vh; */
-}
-.contact-image img {
-  width: 100%
 }
 .contact-copy {
   display: flex;
@@ -734,15 +730,15 @@ label {
   padding-bottom: 2vh;
 }
 
-/* INDIVIDUAL COACHING STYLES */
-.individuals-wrapper {
+/* SERVICE SUBPAGE STYLES */
+.subpage-wrapper {
   align-items: center;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   width: 100%;
 }
-.individuals-copy {
+.subpage-copy-centre {
   align-content: center;
   background-color: rgb(230, 230, 230);
   flex: 1;
@@ -750,12 +746,12 @@ label {
   padding: 5vh 22vw;
   text-align: center;
 }
-.individuals-copy p {
+.subpage-copy-centre p {
   font-size: 1rem;
   font-weight: 400;
   padding: 2vh 0;
 }
-.individuals-copy-title {
+.subpage-title {
   background-color: #ffaf06;
   color: #fff;
   font-size: 2.2rem;
@@ -764,19 +760,10 @@ label {
   text-align: center;
   width: 100%;
 }
-.individuals-call {
-  padding: 5vh 5vw 5vh;
+.subpage-call {
+  padding: 3vh 0 5vh;
 }
-p .individuals-copy-strong {
-  font-size: 20rem;
-}
-.individuals-copy-strong:hover {
-  background-color: #f5ab33;
-  border: 1px solid #f5ab33;
-  color: #fff;
-  font-weight: 400;
-}
-.individuals-style-wrapper {
+.subsection-wrapper-image-left {
   align-content: flex-start;
   display: flex;
   flex: 1;
@@ -784,31 +771,21 @@ p .individuals-copy-strong {
   height: auto;
   width: 100%;
 }
-.style-image {
-  background-image: url(../images/coach_style.jpg);
-  background-position: center center;
-  background-size: cover;
-  flex: 1 1 0;
-  margin: 4vh 3vh 4vh 8vw;
-}
-.style-copy {
+.subsection-copy-justify {
   flex: 1 1 0;
   line-height: 1.8;
   margin: 4vh 8vw 4vh 3vw;
   text-align: justify;
 }
-.style-copy h1 {
+.subsection-copy-justify h1 {
   font-size: 1.3rem;
   font-weight: 500;
 }
-.style-copy p {
+.subsection-copy-justify p {
   font-size: 1rem;
   padding: 2vh 0 0;
 }
-.style-call {
-  padding: 3vh 0 5vh;
-}
-.individuals-commitment-wrapper {
+.subsection-wrapper-image-right {
   align-content: flex-start;
   background-color: rgb(230, 230, 230);
   display: flex;
@@ -816,28 +793,61 @@ p .individuals-copy-strong {
   flex-direction: row-reverse;
   width: 100%;
 }
+.subsection-copy-centre {
+  flex: 1 1 0;
+  margin: 6vh 2vw 6vh 8vw;
+  text-align: center;
+}
+.subsection-copy-centre h1 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding: 2vh 4vw 4vh;
+}
+.subsection-copy-centre p {
+  font-size: 1rem;
+  line-height: 1.8;
+  padding: 2vh 2vw 0;
+}
+.subsection-list-indent {
+  padding-left: 15px;
+}
+/* SERVICE SUBPAGE IMAGES */
+.style-image {
+  background-image: url(../images/coach_style.jpg);
+}
 .commitment-image {
   background-image: url(../images/commitment.jpg);
+}
+.organisations-image {
+  background-image: url(../images/coaching_organisations.jpg);
+}
+.bespoke-image {
+  background-image: url(../images/bespoke.jpg);
+}
+.workshops-image {
+  background-image: url(../images/workshops2.jpg);
+}
+.image-left-styling {
+  background-position: center center;
+  background-size: cover;
+  flex: 1 1 0;
+  margin: 4vh 3vh 4vh 8vw;
+}
+.image-right-styling {
   background-position: center center;
   background-size: cover;
   flex: 1 1 0;
   margin: 6vh 8vw 6vh 2vw;
 }
-.commitment-copy {
-  flex: 1 1 0;
-  margin: 6vh 2vw 6vh 8vw;
-  text-align: center;
+
+/* SERVICE SUBPAGE SPECIFIC STYLES */
+.bespoke-packages {
+  background-color: rgb(200, 200, 200);
 }
-.commitment-copy h1 {
-  font-size: 1.3rem;
-  font-weight: 500;
-  padding: 2vh 4vw 4vh;
+.workshops-wrapper {
+  background-color: rgb(230, 230, 230);
 }
-.commitment-copy p {
-  font-size: 1rem;
-  line-height: 1.8;
-  padding: 2vh 2vw 0;
-}
+
 
 /* MEDIA STYLES */
 
@@ -1046,15 +1056,16 @@ p .individuals-copy-strong {
 .contact-wrapper {
   flex-direction: column-reverse;
 }
-.contact-copy {
-  min-height: 60vh;
-}
 .contact-copy p {
   font-size: 1.1rem;
   padding: 4vh 14vw 4vh;
 }
 .contact-image {
+  flex: 1 1 0;
   min-height: 30vh;
+}
+.contact-copy {
+  flex: 1 1 0;
 }
 .contact-copy-form {
   padding: 0 20vw 4vh;
@@ -1084,61 +1095,58 @@ p .individuals-copy-strong {
   font-size: 1.5rem;
 }
 
-/* INDIVIDUALS STYLES - MAX WIDTH 900PX */
-.individuals-copy {
+/* SERVICE SUBPAGE STYLES - MAX WIDTH 900PX */
+.subpage-copy-centre {
   line-height: 1.8;
-  padding: 5vh 6vw;
+  padding: 3vh 6vw;
 }
-.individuals-copy p {
+.subpage-copy-centre p {
   font-size: 1rem;
 }
-.individuals-copy-title {
+.subpage-title {
   font-size: 1.8rem;
+  padding: 8vh 0 6vh;
 }
-.individuals-call {
-  padding: 5vh 5vw 5vh;
+.subpage-call {
+  padding: 3vh 0 3vh;
 }
-.individuals-style-wrapper {
+.subsection-wrapper-image-left {
   flex-direction: column;
 }
-.style-image {
+.image-right-styling, .image-left-styling {
   margin: 0;
   min-height: 35vh;
 }
-.style-copy {
+.subsection-copy-justify {
   margin: 0;
   padding: 3vh 8vw;
   text-align: center;
 }
-.style-copy h1 {
+.subsection-copy-justify h1 {
   font-size: 1.3rem;
-  padding: 4vh 4vw 2vh;
+  padding: 2vh 4vw 2vh;
 }
-.style-copy p {
+.subsection-copy-justify p {
   font-size: 1rem;
   padding: 2vh 0 0;
 }
-.style-call {
-  padding: 3vh 0 5vh;
-}
-.individuals-commitment-wrapper {
+.subsection-wrapper-image-right {
   flex-direction: column;
 }
-.commitment-image {
-  margin: 0;
-  min-height: 35vh;
-}
-.commitment-copy {
+.subsection-copy-centre {
   margin: 0;
   padding: 3vh 8vw;
 }
-.commitment-copy h1 {
+.subsection-copy-centre h1 {
   font-size: 1.3rem;
   padding: 4vh 4vw 2vh;
 }
-.commitment-copy p {
+.subsection-copy-centre p {
   font-size: 1rem;
   padding: 2vh 0;
+}
+.subsection-list-indent li {
+  list-style: none;
 }
 
 
@@ -1157,6 +1165,17 @@ p .individuals-copy-strong {
 .show-mobile-menu {
   font-size: 1.4rem;
   margin-top: 4vh;
+}
+.header-nav a {
+  font-size: 1rem;
+}
+.header-nav span,
+.drop-trigger,
+.show-mobile-menu {
+  font-size: 1rem;
+}
+.header-nav span:hover {
+  color: #ffaf06;
 }
 
 /* HERO STYLES - MAX 900PX */
@@ -1298,6 +1317,19 @@ p .individuals-copy-strong {
   padding: 0 4vw 2vh;
 }
 
+/* SERVICE SUBPAGE STYLES - MAX WIDTH 450PX */
+.subpage-title {
+  font-size: 1.3rem;
+}
+.subsection-list-indent li {
+  border: 1px dotted #4c4c4c;
+  line-height: 1.4;
+  list-style: none;
+  padding: 2vh 2vw;
+}
+.subsection-list-indent li ~ li {
+  margin-top: 2vh;
+}
 
 }
 
@@ -1313,7 +1345,7 @@ p .individuals-copy-strong {
 
 @media (max-width: 350px) {
 
-/* MOBILE MENU - MAX 450PX */
+/* MOBILE MENU - MAX 350PX */
 .show-mobile-menu {
   font-size: 1.1rem;
   margin-top: 2.4vh;
@@ -1405,4 +1437,12 @@ p .individuals-copy-strong {
   font-size: 1.3rem;
 }
 
+}
+
+@media (max-width: 320px) {
+
+  /* MOBILE MENU - MAX 320PX */
+  .mobile-menu-check:checked ~ .show-mobile-menu:after {
+    top: 1.7em;
+  }
 }
