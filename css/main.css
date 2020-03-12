@@ -65,7 +65,7 @@ h1, h2, h3 {
   color: #4c4c4c;
   font-family: 'Playfair Display', serif;
 }
-h4, h5, h6, p, li {
+h4, h5, h6, p, li, span {
   color: #4c4c4c;
   font-family: 'Raleway', Helvetica, sans-serif;
 }
@@ -281,6 +281,11 @@ h4, h5, h6, p, li {
   font-weight: 400;
   text-transform: none;
 }
+.half-hero {
+  background-position: center center;
+  background-size: cover;
+  height: 40vh;
+}
 
 /* CALLOUT STYLES */
 .home-callout {
@@ -399,16 +404,16 @@ h4, h5, h6, p, li {
   align-items: center;
   background-color: #f5ab33;
   display: flex;
-  flex: 1 1 auto;
+  flex: 1 1 0;
   flex-direction: column;
   text-align: center;
-  min-height: 85vh;
-  /* width: 100%; */
+  /* min-height: 85vh; */
+  width: 100%;
   /* consider doing min-heigh at 100vh and add padding to top */
 }
 .testimonial-image {
   box-sizing: border-box;
-  flex: 0 1 0;
+  flex: 0 1 auto;
   padding-top: 7vh;
 }
 .quote img {
@@ -417,14 +422,14 @@ h4, h5, h6, p, li {
 }
 .testimonial-copy {
   /* box-sizing: border-box; */
-  flex: 1 1 0;
+  flex: 0 1 auto;
   padding: 6vh 16vw 0;
 }
 .testimonial-copy p {
   color: #fff;
   font-size: 1.15rem;
   font-weight: 400;
-  line-height: 2;
+  line-height: 1.8;
   /* overflow: scroll; */
 }
 .testimonial-copy span:last-child {
@@ -433,28 +438,26 @@ h4, h5, h6, p, li {
 .testimonial-author {
   /* box-sizing: border-box; */
   align-self: center;
-  flex: 1 1 0;
-  padding: 5vh 5vw 0;
+  flex: 0 1 auto;
+  padding: 3vh 5vw 0vh;
 }
 .testimonial-author h2 {
-  color: #fff;
   font-size: 1.3rem;
   font-weight: 500;
   line-height: 1;
 }
 .testimonial-call {
   align-self: center;
-  flex: 1 1 0;
+  flex: 0 1 auto;
+  padding: 7vh 0 5vh;
 }
-
 
 /* CONTACT FORM STYLES */
 .contact-wrapper {
-  align-content: center;
+  align-content: flex-start;
   display: flex;
   flex: 1 1 0;
   flex-direction: row;
-  min-height: 78vh;
   text-align: center;
   width: 100%;
   /* consider doing min-height at 100vh and add padding to top */
@@ -463,12 +466,12 @@ h4, h5, h6, p, li {
   background-position: center bottom;
   background-image: url(../images/forest5.jpeg);
   background-size: cover;
-  flex: 2 1 0;
+  flex: 0 1 40vw;
 }
 .contact-copy {
-  display: flex;
-  flex: 3 1 0;
-  flex-direction: column;
+  /* display: flex; */
+  flex: 0 1 60vw;
+  /* flex-direction: column; */
   padding-bottom: 4vh;
 }
 .contact-copy h1 {
@@ -541,6 +544,7 @@ label {
   text-align: center;
 }
 .footer h4 span {
+  color: rgb(240, 240, 240);
   display: block;
   padding-top: 2vh;
 }
@@ -579,17 +583,23 @@ footer p {
 }
 /* .footer-nav {
   text-align: center;
-}
-.footer-nav li {
+} */
+/* .footer-nav li {
   display: inline-block;
   list-style: none;
   margin-left: 1em;
   text-align: center;
-}
+} */
 .footer-nav a {
   color: #fff;
   font-size: 1rem;
-} */
+}
+.footer img {
+  display: block;
+  height: 7vh;
+  margin: 0 auto;
+  padding: 1vh 0 0.5vh;
+}
 
 /* ABOUT PAGE STYLES */
 .about-wrapper {
@@ -881,6 +891,142 @@ footer p {
   background-color: rgb(230, 230, 230);
 }
 
+/* BLOG PAGE(S) STYLES */
+.page {
+  margin: 6vh auto 15vh;
+  max-width: 980px;
+  width: 85vw;
+}
+.page p {
+  font-size: 1rem;
+  line-height: 1.8;
+}
+.page h1 {
+  background-color: #ffaf06;
+  color: #fff;
+  font-size: 2.2rem;
+  margin-bottom: 4vh;
+  padding: 4vh 4vw;
+  text-align: center;
+}
+.page h2 {
+  font-size: 1.3rem;
+  margin-bottom: 2vh;
+}
+.page h4 {
+  color: #999;
+  font-weight: bold;
+  margin-bottom: 1em;
+  text-transform: uppercase;
+}
+.page .social-link i {
+  background: rgba(150,150,150,0.5);
+  border-radius: 99px;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: bold;
+  height: 2.4rem;
+  line-height: 1;
+  padding-top: 0.5em;
+  text-align: center;
+  vertical-align: middle;
+  width: 2.4rem;
+}
+.col-two {
+  display: flex;
+}
+.col-two .col-aside {
+  flex: 0 0 20em;
+  order: 1;
+}
+.col-two .col-content {
+  flex: 1;
+}
+.blog-recent {
+  padding-top: 2vh;
+  text-align: right;
+}
+.blog-title-list {
+  list-style: none;
+  padding: 0;
+}
+.blog-title-list li ~ li {
+  margin-top: 1.5em;
+}
+.blog-title-list span {
+  color: #999;
+  display: block;
+  font-size: 0.8em;
+  /* font-style: italic; */
+  margin-top: 0.5em;
+}
+.blog-posts ~ .blog-posts {
+  border-top: 1px dotted rgba(0, 0, 0, 0.1);
+  margin-top: 4em;
+  padding-top: 4em;
+}
+.blog-posts .post-header {
+  font-size: 0.8rem;
+}
+.post-header {
+  margin-bottom: 1.5em;
+}
+.post-header img,
+.post-header .social-link {
+  margin-right: 0.5em;
+}
+.post-header img {
+  border-radius: 99px;
+  display: inline-block;
+  height: 2.5em;
+  vertical-align: middle;
+}
+.posts-image {
+  background-position: center center;
+  background-size: cover;
+  height: 18vh;
+  margin-bottom: 1.5em;
+}
+.post {
+  width: 100%;
+}
+.post-content,
+.post-footer {
+  margin: auto;
+  max-width: 40em;
+  width: 85vw;
+}
+.pull-left {
+  float: left;
+  margin: 2em 2em 2em -2%;
+}
+.pull-right {
+  float: right;
+  margin: 2em -2% 2em 2em
+}
+.post-aside {
+  background-color: rgba(0, 0, 0, 0.01);
+  float: right;
+  margin: 0 0 2em 2em;
+  padding: 2em;
+}
+.post .post-header {
+  margin-bottom: 2.5em;
+  text-align: center;
+}
+.post-content {
+  font-size: 1.1rem;
+}
+.post-footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  /* font-style: italic; */
+  font-size: 0.8em;
+  margin-top: 3em;
+  padding-top: 2em;
+  text-align: center;
+}
+
 
 /* MEDIA STYLES */
 
@@ -1087,10 +1233,10 @@ footer p {
   padding: 6vh 8vw 0;
 }
 .testimonial-copy p {
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 .testimonial-author h2 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
 /* CONTACT STYLES - MAX 900PX */
@@ -1102,11 +1248,11 @@ footer p {
   padding: 4vh 14vw 4vh;
 }
 .contact-image {
-  flex: 1 1 0;
-  min-height: 30vh;
+  flex: 1 1 auto;
+  height: 35vh;
 }
 .contact-copy {
-  flex: 1 1 0;
+  flex: 1 1 auto;
 }
 .contact-copy-form {
   padding: 0 20vw 4vh;
@@ -1247,12 +1393,6 @@ footer p {
   background-color: initial;
 }
 
-/* CONTACT STYLES - MAX 450 */
-.contact-wrapper {
-  flex-direction: column-reverse;
-  min-height: 130vh;
-}
-
 /* SERVICES STYLES - MAX 450 */
 .services-header h1 {
   font-size: 2rem;
@@ -1309,14 +1449,24 @@ footer p {
 .testimonial-copy {
   padding: 4vh 6vw 0;
 }
-#testimonial-copy-mobile p {
-  font-size: 1.2rem;
-  font-weight: 400;
-  line-height: 1.9;
+.testimonial-copy p {
+  font-size: 1.1rem;
 }
-#testimonial-author-mobile h2 {
-  font-size: 1.4rem;
+.testimonial-author h2 {
+  font-size: 1.3rem;
+  padding: 2vh 5vw 0;
 }
+.testimonial-call ul {
+  padding: 2vh 0 0;
+}
+.testimonial-call #call-action {
+  background-color: #4c4c4c;
+}
+.testimonial-call #call-action a {
+  color: #ffaf06;
+  font-size: 1.1rem;
+}
+
 
 /* CONTACTS STYLES - MAX WIDTH 450PX */
 .contact-copy {
@@ -1327,7 +1477,8 @@ footer p {
   padding: 4vh 8vw 3vh;
 }
 .contact-image {
-  min-height: 30vh;
+  flex: 1 1 0;
+  min-height: 35vh;
 }
 .contact-copy-form {
   padding: 3vh 20vw 5vh;
@@ -1409,6 +1560,11 @@ footer p {
 .mobile-menu-check:checked ~ .show-mobile-menu:after {
   top: 1.9em;
 }
+
+/* TESTIMONIAL PAGE STYLE - MAX 360PX */
+.testimonial-call {
+  padding: 8vh 0 4vh;
+}
 }
     
 
@@ -1469,7 +1625,8 @@ footer p {
   font-size: 1.6rem;
 }
 .contact-image {
-  /* min-height: 30vh; */
+  min-height: 35vh;
+  flex: 1 1 0
 }
 .contact-copy-form {
   padding: 3vh 20vw 5vh;
