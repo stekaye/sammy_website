@@ -25,7 +25,7 @@ layout: default
               <img src="{{ post.gravatar }}" />
               <a href="{{ post.authorInstagram }}" class="social-link"><i class="fab fa-instagram"></i></a>
               <span>by: {{ post.author }}</span>
-              <span> - {{ post.date | date: '%d %B, %Y' }}</span>
+              <span><span class="remove-dash"> - </span>{{ post.date | date: '%d %B, %Y' }}</span>
             </div>
           </header>
           <div class="posts-image" style="background-image:url({{ post.postHero }})"></div>
