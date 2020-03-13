@@ -155,6 +155,9 @@ h4, h5, h6, p, li, span {
 .header-nav span:hover {
   color: #ffaf06;
 }
+.header-nav .mobile-only {
+  display: none;
+}
 
 /* MOBILE MENU */
 .mobile-menu-check,
@@ -1092,6 +1095,13 @@ footer p {
   top: 1.15em;
   width: 100%;
   text-align: center;
+}
+.header-nav span {
+  display: none;
+}
+.header-nav .mobile-only {
+  display: block;
+  margin-top: 1em;
 }
 
 
