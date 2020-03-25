@@ -402,6 +402,107 @@ h4, h5, h6, p, li, span {
   object-fit: cover;
 }
 
+/* CAROUSEL STYLES */
+
+.carousel {  
+  /* display: flex; */
+  /* flex-direction: column; */
+  height: 75vh;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  width: 90%;
+}
+.carousel__track-container {
+  /* background-color: #f5ab33; */
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.carousel__track {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+  text-align: center;
+  transition: transform 250ms ease-in;
+}
+.carousel__slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+.carousel__slide img {
+    display: inline-block;
+    height: 7vh;
+    padding: 7vh 0 0;
+}
+.carousel__slide p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  padding: 6vh 12vw 0;
+}
+.carousel__slide h2 {
+  font-size: 1.2rem;
+  padding: 4vh 0 0;
+}
+.carousel__slide ul {
+  list-style: none;
+  padding: 6vh 0 2vh;
+}
+.carousel__slide .testimonial-copy-mobile {
+  display: none;
+}
+.slide-content {
+  height: 100%;
+  align-content: center; 
+  width: 80%;
+}
+.carousel__button {
+  background: transparent;
+  cursor: pointer;
+  border: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.carousel__button--left {
+  left: -40px;
+}
+.carousel__button--right {
+  right: -40px;
+}
+.carousel__button img {
+  width: 20px;
+}
+.carousel__nav {
+  /* background-color: #f5ab33;   */
+  display: flex;
+  height: 10vh;
+  justify-content: center;
+  /* margin-bottom: 8vh; */
+  padding: 4vh 0 4vh;
+  vertical-align: middle;
+}
+.carousel__indicator {
+  background: rgba(0, 0, 0, 0.3);
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 15px;
+  margin: 0 12px;
+  width: 15px;
+}
+.carousel__indicator.current-slide {
+  background: rgba(0, 0, 0, 0.75);
+}
+.is-hidden {
+  display: none;
+}
+
 /* TESTIMONIAL STYLES */
 .testimonial-wrapper {
   align-items: center;
@@ -410,7 +511,7 @@ h4, h5, h6, p, li, span {
   flex: 1 1 0;
   flex-direction: column;
   text-align: center;
-  /* min-height: 85vh; */
+  min-height: 85vh;
   width: 100%;
   /* consider doing min-heigh at 100vh and add padding to top */
 }
@@ -1175,6 +1276,54 @@ footer p {
 .services-title h3 {
   font-size: 2rem;
 }
+
+/* CAROUSEL STYLES - MAX WIDTH 1050PX */
+
+.carousel {  
+  width: 80%;
+}
+.carousel__track {
+  transition: transform 250ms ease-in;
+}
+.carousel__slide img {
+    display: inline-block;
+    height: 7vh;
+    padding: 7vh 0 0;
+}
+.carousel__slide p {
+  font-size: 1.3rem;
+  line-height: 1.85;
+  padding: 6vh 12vw 0;
+}
+.carousel__slide h2 {
+  font-size: 1.4rem;
+  padding: 4vh 0 0;
+}
+.carousel__slide ul {
+  list-style: none;
+  padding: 6vh 0 2vh;
+}
+.carousel__slide .testimonial-copy-mobile {
+  display: none;
+}
+.slide-content {
+  height: 100%;
+  align-content: center; 
+  width: 80%;
+}
+.carousel__button--left {
+  left: -20px;
+}
+.carousel__button--right {
+  right: -20px;
+}
+.carousel__button img {
+  width: 20px;
+}
+.carousel__nav {
+  height: 10vh;
+  padding: 4vh 0 4vh;
+}
  
 /* FAQ STYLES - MAX WIDTH 1050PX */
 .faq-copy p {
@@ -1247,6 +1396,25 @@ footer p {
 }
 .testimonial-author h2 {
   font-size: 1.4rem;
+}
+
+/* CAROUSEL STYLES - MAX WIDTH 900PX */
+
+.carousel {  
+  width: 90%;
+}
+.carousel__slide p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+.carousel__slide h2 {
+  font-size: 1.4rem;
+}
+.carousel__button--left {
+  left: -15px;
+}
+.carousel__button--right {
+  right: -15px;
 }
 
 /* CONTACT STYLES - MAX 900PX */
@@ -1478,6 +1646,40 @@ footer p {
   font-weight: 400;
 }
 
+/* CAROUSEL STYLES - MAX WIDTH 450PX */
+
+.carousel {  
+  width: 80%;
+}
+.carousel__slide img {
+    padding: 5vh 0 0;
+}
+.carousel__slide p {
+  font-size: 1rem;
+  line-height: 1.7;
+  padding: 4vh 4vw 0;
+}
+.carousel__slide h2 {
+  font-size: 1.2rem;
+  padding: 4vh 0 0;
+}
+.carousel__slide ul {
+  list-style: none;
+  padding: 6vh 0 2vh;
+}
+.carousel__slide .testimonial-copy-mobile {
+  display: initial;
+}
+.carousel__slide .testimonial-copy-standard {
+  display: none;
+}
+.carousel__button--left {
+  left: -30px;
+}
+.carousel__button--right {
+  right: -30px;
+}
+
 /* TESTIMONIAL STYLES - WIDTH 450PX */
 
 .testimonial-copy span:first-child {
@@ -1592,6 +1794,34 @@ footer p {
   .mobile-menu-check:checked ~ .show-mobile-menu:after {
     top: 1.9em;
   }
+
+  /* CAROUSEL STYLES - MAX WIDTH 375PX */
+
+.carousel__slide p {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  padding: 3vh 4vw 0;
+}
+.carousel__slide h2 {
+  font-size: 1.2rem;
+  padding: 3vh 0 0;
+}
+.carousel__slide ul {
+  list-style: none;
+  padding: 6vh 0 2vh;
+}
+.carousel__slide .testimonial-copy-mobile {
+  display: initial;
+}
+.carousel__slide .testimonial-copy-standard {
+  display: none;
+}
+.carousel__button--left {
+  left: -30px;
+}
+.carousel__button--right {
+  right: -30px;
+}
 }
 
 @media (max-width: 360px) {
