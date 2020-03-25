@@ -1652,20 +1652,19 @@ footer p {
   width: 80%;
 }
 .carousel__slide img {
-    padding: 5vh 0 0;
+    padding: 7vh 0 0;
 }
 .carousel__slide p {
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.7;
-  padding: 4vh 4vw 0;
+  padding: 5vh 4vw 0;
 }
 .carousel__slide h2 {
-  font-size: 1.2rem;
-  padding: 4vh 0 0;
+  font-size: 1.3rem;
+  padding: 5vh 0 0;
 }
 .carousel__slide ul {
-  list-style: none;
-  padding: 6vh 0 2vh;
+  display: none;
 }
 .carousel__slide .testimonial-copy-mobile {
   display: initial;
@@ -1798,17 +1797,13 @@ footer p {
   /* CAROUSEL STYLES - MAX WIDTH 375PX */
 
 .carousel__slide p {
-  font-size: 0.95rem;
-  line-height: 1.55;
-  padding: 3vh 4vw 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  padding: 4vh 4vw 0;
 }
 .carousel__slide h2 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   padding: 3vh 0 0;
-}
-.carousel__slide ul {
-  list-style: none;
-  padding: 6vh 0 2vh;
 }
 .carousel__slide .testimonial-copy-mobile {
   display: initial;
