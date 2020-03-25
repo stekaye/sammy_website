@@ -441,8 +441,8 @@ h4, h5, h6, p, li, span {
     padding: 7vh 0 0;
 }
 .carousel__slide p {
-  font-size: 1.15rem;
-  line-height: 1.8;
+  font-size: 1.1rem;
+  line-height: 1.75;
   padding: 6vh 12vw 0;
 }
 .carousel__slide h2 {
@@ -451,7 +451,7 @@ h4, h5, h6, p, li, span {
 }
 .carousel__slide ul {
   list-style: none;
-  padding: 6vh 0 2vh;
+  padding: 5vh 0 2vh;
 }
 .carousel__slide .testimonial-copy-mobile {
   display: none;
